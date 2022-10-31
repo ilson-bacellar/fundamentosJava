@@ -1,0 +1,49 @@
+package br.edu.infnet.app.testes;
+
+import java.util.Scanner;
+
+public class Terceiro {
+
+	private static String[] nomes;
+	private static float[] av1s;
+	private static float[] av2s;
+
+	private static final int TAMANHO = 5;		
+		
+	private static void imprimir() {		
+		for (int i = 0; i < TAMANHO; i++) {
+			if(nomes[i] != null) {
+				System.out.println("- " + nomes[i] + " - " + av1s[i] + " - " + av2s[i]);
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		nomes = new String[TAMANHO];
+		av1s = new float[TAMANHO];
+		av2s = new float[TAMANHO];
+
+		int qtde = Integer.valueOf(args[0]);
+				
+		Scanner in = new Scanner(System.in);
+
+		if(qtde <= TAMANHO) {
+			for (int i = 0; i < qtde; i++) {
+				System.out.print("Informe o nome do aluno: ");	
+				nomes[i] = in.next();
+
+				System.out.print("Informe a nota da AV1: ");	
+				av1s[i] = in.nextFloat();
+
+				System.out.print("Informe a nota da AV2: ");	
+				av2s[i] = in.nextFloat();
+			}
+
+			imprimir();
+		} else {
+			System.out.println("Impossível realizar o cadastramento!!!");
+		}
+				
+		in.close();
+	}
+}
