@@ -1,6 +1,7 @@
 package br.edu.infnet.app.dominio;
 
 import br.edu.infnet.app.auxiliar.Constante;
+import br.edu.infnet.app.exceptions.NomeIncompletoException;
 
 public class Professor extends Pessoa{
 	
@@ -33,7 +34,7 @@ public class Professor extends Pessoa{
 	private float bonus;
 	private float desconto;
 
-	public Professor() {
+	public Professor() throws NomeIncompletoException {
 		this.setNome(Constante.NOME_PROFESSOR_PADRAO);
 	}
 	
@@ -58,4 +59,7 @@ public class Professor extends Pessoa{
 		return (salario - desconto) + bonus;
 	}
 	
+	public void imprimir() throws NomeIncompletoException {
+		System.out.println("Nome: " + getNome() + " | Idade: " + idade + " | Salário base: " + salario + " | Bônus: " + bonus + " | Desconto: " + desconto + " | Salário líquido: " + calcularSalario(salario, bonus, desconto));
+	}
 }

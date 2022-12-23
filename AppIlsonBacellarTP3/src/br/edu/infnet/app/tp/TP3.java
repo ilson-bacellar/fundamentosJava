@@ -6,6 +6,7 @@ import br.edu.infnet.app.auxiliar.Constante;
 import br.edu.infnet.app.dominio.Aluno;
 import br.edu.infnet.app.dominio.Pessoa;
 import br.edu.infnet.app.dominio.Professor;
+import br.edu.infnet.app.exceptions.NomeIncompletoException;
 
 
 public class TP3 {
@@ -42,7 +43,7 @@ public class TP3 {
 			switch (opcao) {
 			case "1":
 				if(pos < Constante.TAMANHO) {
-							
+										
 					System.out.print("Informe o seu nome: ");	
 					String nome = in.next();
 					
@@ -64,7 +65,11 @@ public class TP3 {
 					
 					pessoas[pos] = prof;
 					
-					pessoas[pos].imprimir();
+					try {
+						pessoas[pos].imprimir();
+					} catch (NomeIncompletoException e) {
+						System.out.println("[ERROR] " + e.getMessage() +"\n");
+					}
 
 					pos++;
 				} else {
@@ -74,7 +79,7 @@ public class TP3 {
 
 			case "2":
 				if(pos < Constante.TAMANHO) {
-												
+										
 					System.out.print("Informe o seu nome: ");	
 					String nome = in.next();		
 					
@@ -90,7 +95,11 @@ public class TP3 {
 					
 					pessoas[pos] = alun;
 					
-					pessoas[pos].imprimir();
+					try {
+						pessoas[pos].imprimir();
+					} catch (NomeIncompletoException e) {
+						System.out.println("[ERROR] " + e.getMessage() +"\n");
+					}
 
 					pos++;
 				} else {
@@ -103,7 +112,11 @@ public class TP3 {
 				int id = in.nextInt();
 
 				if(id >= 0 && id < pos) {
-					pessoas[id].imprimir();
+					try {
+						pessoas[id].imprimir();
+					} catch (NomeIncompletoException e) {
+						System.out.println("[ERROR] " + e.getMessage() +"\n");
+					}
 				} else {
 					System.out.println("O índice ["+id+"] é inválido!");
 				}

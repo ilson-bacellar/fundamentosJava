@@ -1,6 +1,7 @@
 package br.edu.infnet.app.dominio;
 
 import br.edu.infnet.app.auxiliar.Constante;
+import br.edu.infnet.app.exceptions.NomeIncompletoException;
 
 public class Aluno extends Pessoa{
 	
@@ -25,7 +26,7 @@ public class Aluno extends Pessoa{
 	private float media = calcularMedia(av1, av2);
 	private String situacao = situacaoAluno(media);
 	
-	public Aluno() {
+	public Aluno() throws NomeIncompletoException {
 		this.setNome(Constante.NOME_ALUNO_PADRAO);
 	}
 	
@@ -51,6 +52,9 @@ public class Aluno extends Pessoa{
 	private String situacaoAluno(float aMedia) {
 		return (aMedia < 7) ? "reprovado" : "aprovado";
 	}
-
+	
+	public void imprimir() throws NomeIncompletoException {
+		System.out.println("Nome: " + getNome() + " | AV1: " + av1 + " | AV2: " + av2 + " | Média: " + media + " | Situação: " + situacao);
+	}
 
 }

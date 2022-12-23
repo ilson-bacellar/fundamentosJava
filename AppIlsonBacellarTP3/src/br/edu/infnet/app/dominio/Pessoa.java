@@ -1,10 +1,15 @@
 package br.edu.infnet.app.dominio;
 
 import br.edu.infnet.app.auxiliar.Constante;
+import br.edu.infnet.app.exceptions.NomeIncompletoException;
 
 public class Pessoa {
 	
-	public String getNome() {
+	public String getNome() throws NomeIncompletoException {
+		if(nome == null || sobrenome == null || ultimoNome == null) {
+			throw new NomeIncompletoException("O preenchimento do campo 'Nome' está incorreto");
+		} 
+		
 		StringBuilder sb = new StringBuilder();
 		sb.append(nome.toUpperCase());
 		sb.append(" ");
@@ -15,10 +20,18 @@ public class Pessoa {
 		return sb.toString();
 	}
 
-	public void setNome(String nome) {
+	public void setNome(String nome) throws NomeIncompletoException {
+		
+		if(nome == null) {
+			throw new NomeIncompletoException("O preenchimento do campo 'Nome' está incorreto");
+		}
 		
 		int posInicial = nome.indexOf(" ");
 		int posFinal = nome.lastIndexOf(" ");
+		
+		if(posInicial < 0 || posFinal < 0) {
+			throw new NomeIncompletoException("O preenchimento do campo 'Nome' está incorreto");
+		}
 		
 		this.nome = nome.substring(0, posInicial);
 		this.sobrenome = nome.substring(posInicial, posFinal).trim();
@@ -38,21 +51,16 @@ public class Pessoa {
 	}
 	
 	public Pessoa(String nome) {
-		int posInicial = nome.indexOf(" ");
-		int posFinal = nome.lastIndexOf(" ");
-		
-		this.nome = nome.substring(0, posInicial);
-		this.sobrenome = nome.substring(posInicial, posFinal).trim();
-		this.ultimoNome = nome.substring(posFinal).trim();
+		this.nome = nome;
 	}
 	
 	@Override
 	public String toString() {
-		return "A pessoa é: " + getNome();
+		return "A pessoa é: " + nome + " " + sobrenome + " " + ultimoNome;
 	}
 	
-	public void imprimir() {
-		System.out.println(this);
+	public void imprimir() throws NomeIncompletoException {
+		System.out.println(getNome());
 	}
 
 }
