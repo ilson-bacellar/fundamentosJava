@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="br.edu.infnet.app.dominio.Ortodontia"/>
+    <fullyQualifiedTypeName name="br.edu.infnet.app.dominio.Canal"/>
+    <fullyQualifiedTypeName name="br.edu.infnet.app.auxiliar.Constante"/>
+    <fullyQualifiedTypeName name="br.edu.infnet.app.dominio.Pessoa"/>
+    <fullyQualifiedTypeName name="br.edu.infnet.app.dominio.Professor"/>
+    <fullyQualifiedTypeName name="br.edu.infnet.app.dominio.Aluno"/>
+</qualifiedTypeNameHistroy>
