@@ -51,7 +51,7 @@ public class Professor extends Pessoa{
 
 	@Override
 	public String toString() {
-		return super.toString() + "| Idade: " + idade + "| Salário base: " + salario + "| Bônus: " + bonus + "| Desconto: " + desconto + "| Salário líquido: " + calcularSalario(salario, bonus, desconto);
+		return super.toString() + " | Idade: " + idade + " | Salário base: " + salario + " | Bônus: " + bonus + " | Desconto: " + desconto + " | Salário líquido: " + calcularSalario(salario, bonus, desconto);
 	}
 	
 	private float calcularSalario(float salario, float bonus, float desconto) {

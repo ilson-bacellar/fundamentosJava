@@ -7,10 +7,24 @@ import br.edu.infnet.app.auxiliar.Constante;
 public class Paciente {
 	
 	public String getNome() {
-		return nome;
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append(nome.toUpperCase());
+		sb.append(" ");
+		sb.append(sobrenome);
+		sb.append(" ");
+		sb.append(ultimoNome);
+		
+		return sb.toString();
 	}
 	public void setNome(String nome) {
-		this.nome = nome;
+		
+		int posInicial = nome.indexOf(" ");
+		int posFinal = nome.lastIndexOf(" ");
+		
+		this.nome = nome.substring(0, posInicial);
+		this.sobrenome = nome.substring(posInicial, posFinal).trim();
+		this.ultimoNome = nome.substring(posFinal).trim();
 	}
 	public String getTelefone() {
 		return telefone;
@@ -33,6 +47,8 @@ public class Paciente {
 	}
 	
 	private String nome;
+	private String sobrenome;
+	private String ultimoNome;
 	private String telefone;
 	private String prontuario;
 	private Servico[] servicos;
@@ -44,7 +60,12 @@ public class Paciente {
 	}
 	
 	public Paciente(String nome, String telefone) {
-		this.nome = nome;
+		int posInicial = nome.indexOf(" ");
+		int posFinal = nome.lastIndexOf(" ");
+		
+		this.nome = nome.substring(0, posInicial);
+		this.sobrenome = nome.substring(posInicial, posFinal).trim();
+		this.ultimoNome = nome.substring(posFinal).trim();
 		this.telefone = telefone;
 		this.prontuario = Constante.PRONTUARIO_PADRAO;
 	}
@@ -55,7 +76,7 @@ public class Paciente {
 	}
 	
 	public String toString() {
-		return "Nome: " + nome + " | Telefone: " + telefone + " | Prontuário: " + prontuario;
+		return "Nome: " + getNome() + " | Telefone: " + telefone + " | Prontuário: " + prontuario;
 	}
 	
 	private void imprimirServicos() {
@@ -67,7 +88,6 @@ public class Paciente {
 					servico.getValor() 
 					);
 			}  
-			
 		}
 	}
 	
