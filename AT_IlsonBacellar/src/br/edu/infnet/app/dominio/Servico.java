@@ -2,8 +2,7 @@ package br.edu.infnet.app.dominio;
 
 import br.edu.infnet.app.auxiliar.Constante;
 
-public class Servico {
-
+public abstract class Servico {
 	public String getNome() {
 		return nome;
 	}
