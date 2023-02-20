@@ -22,4 +22,6 @@
     <fullyQualifiedTypeName name="br.edu.infnet.appdent.exceptions.TelefoneInvalidoException"/>
     <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.domain.Atendimento"/>
     <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.auxiliar.Constante"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.domain.Usuario"/>
 </qualifiedTypeNameHistroy>

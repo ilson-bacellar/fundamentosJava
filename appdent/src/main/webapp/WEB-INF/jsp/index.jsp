@@ -2,12 +2,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>AppDent</title>
+	<meta charset="ISO-8859-1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<title>AppDent</title>
 </head>
 <body>
-	<h2>AppDent</h2>
-	
-	<h3>Cadastro de <a href="/usuario">usuários</a></h3>
+	<div class="container mt-3">
+  		<h2>AppDent</h2>
+  		  		
+  		<h3>Cadastro de <a href="/usuario/lista">usuários</a></h3>
+	</div>	
 </body>
 </html>
