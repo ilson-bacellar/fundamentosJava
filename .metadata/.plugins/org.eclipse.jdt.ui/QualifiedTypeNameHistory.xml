@@ -23,5 +23,8 @@
     <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.domain.Atendimento"/>
     <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.auxiliar.Constante"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.repository.UsuarioRepository"/>
     <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.domain.Usuario"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.repository.AcessoRepository"/>
 </qualifiedTypeNameHistroy>

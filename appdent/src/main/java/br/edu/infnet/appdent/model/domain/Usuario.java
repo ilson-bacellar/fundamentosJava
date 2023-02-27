@@ -1,7 +1,10 @@
 package br.edu.infnet.appdent.model.domain;
 
+import src.main.java.br.edu.infnet.applanche.model.domain.Integer;
+
 public class Usuario {
 
+	private Integer id;
 	private String nome;
 	private String senha;
 	private String email;
@@ -29,6 +32,13 @@ public class Usuario {
 				email,
 				senha
 			);
+	}
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	
 	public String getNome() {
