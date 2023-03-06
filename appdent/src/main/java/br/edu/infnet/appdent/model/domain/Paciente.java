@@ -80,6 +80,7 @@ public String getNome() throws NomeIncompletoException {
 		this.servicos = servicos;
 	}
 	
+	private Integer id;
 	private String nome;
 	private String sobrenome;
 	private String ultimoNome;

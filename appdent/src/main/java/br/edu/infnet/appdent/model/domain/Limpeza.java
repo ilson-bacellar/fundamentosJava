@@ -28,9 +28,10 @@ public class Limpeza extends Servico {
 		this.periodontia = periodontia;
 	}
 
-	public boolean dessensibilizacao;
-	public boolean clareamento;
-	public boolean periodontia;
+	private Integer id;
+	private boolean dessensibilizacao;
+	private boolean clareamento;
+	private boolean periodontia;
 	
 	public Limpeza() {
 		this(Constante.NOME_PADRAO, Constante.DESCRICAO_PADRAO, Constante.VALOR_PADRAO);

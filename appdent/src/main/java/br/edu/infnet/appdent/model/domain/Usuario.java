@@ -1,13 +1,14 @@
 package br.edu.infnet.appdent.model.domain;
 
-import src.main.java.br.edu.infnet.applanche.model.domain.Integer;
+
 
 public class Usuario {
 
 	private Integer id;
 	private String nome;
-	private String senha;
 	private String email;
+	private String senha;
+	
 	
 	public Usuario( ) {
 	}

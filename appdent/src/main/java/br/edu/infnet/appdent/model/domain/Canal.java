@@ -28,6 +28,7 @@ public class Canal extends Servico {
 		this.tipoCoroa = tipoCoroa;
 	}
 
+	private Integer id;
 	private int numeroSessoes;
 	private String tipoRestauracao;
 	private String tipoCoroa;

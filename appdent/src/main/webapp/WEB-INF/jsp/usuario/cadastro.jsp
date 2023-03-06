@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<meta charset="ISO-8859-1">
-	<title>Cadastro de usuário</title>
+	<title>Cadastro de Usuários</title>
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 
 	<div class="container">
 		<form action="/usuario/incluir" method="post">
-			<h3>Cadastro de Usuário</h3>
+			<h3>Cadastro de Usuários</h3>
 		
 			<div class="form-group">
 				<label>Nome:</label> 	

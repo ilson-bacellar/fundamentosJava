@@ -1,46 +1,55 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<meta charset="ISO-8859-1">
-	<title>AppDent</title>
+	<title>Listagem de Serviços de Limpeza</title>
 </head>
 <body>
 
 	<div class="container">
-		<form action="/limpeza" method="get">
-			<h3>Listagem de Serviços de Limpeza</h3>
 
-			<button type="submit">Novo</button>
-		</form>
+		<h3>Listagem de Serviços de Limpeza</h3>
+
+		<c:if test="${not empty mensagem}">
+			<div class="alert alert-success">
+				<strong>Atenção!</strong> ${mensagem}
+			</div>
+		</c:if>
+
+		<c:if test="${empty limpezas}">
+			<h5>Não existem serviços de limpeza cadastrados!</h5>
+		</c:if>
+
+		<c:if test="${not empty limpezas}">
+			<h5>Quantidade de serviços de limpeza cadastrados: ${limpezas.size()}!</h5>
+		</c:if>
 
 		<table class="table table-striped">
-		  <thead>
-		    <tr>
-		      <th>Nome</th>
-		      <th>Descrição</th>
-		      <th>Valor</th>
-		    </tr>
-		  </thead>
-		  <tbody>
-		   <tr>
-		      <td>Limpeza</td>
-		      <td>Com jato de bicarbonato de sódio e aplicação de flúor</td>
-		      <td>300,00</td>
-		    </tr>
-		    <tr>
-		      <td>Limpeza</td>
-		      <td>Remoção de tártaro e aplicação de flúor</td>
-		      <td>500,00</td>
-		    </tr>
-		    <tr>
-		      <td>Limpeza</td>
-		      <td>Escovação completa e aplicação de flúor</td>
-		      <td>400,00</td>
-		    </tr>
-		  </tbody>
-		</table>		
+			<thead>
+				<tr>
+					<th>Identificador</th>
+					<th>Dessensibilização</th>
+					<th>Clareamento</th>
+					<th>Periodontia</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="l" items="${limpezas}">
+					<tr>
+						<td>${l.id}</td>
+						<td>${l.dessensibilizacao}</td>
+						<td>${l.clareamento}</td>
+						<td>${l.periodontia}</td>
+						<td><a href="/limpeza/${l.id}/excluir">Excluir</a></td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
 
 	</div>
 

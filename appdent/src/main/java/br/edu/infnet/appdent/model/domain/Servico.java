@@ -28,6 +28,7 @@ public abstract class Servico {
 		this.valor = valor;
 	}
 
+	private Integer id;
 	private String nome;
 	private String descricao;
 	private float valor;

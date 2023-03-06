@@ -13,12 +13,13 @@ import org.springframework.ui.Model;
 import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.repository.AcessoRepository;
 
-
 @Controller
+@SessionAttributes("usuario")
 public class AcessoController {
 	
 	@GetMapping(value = "/login")
 	public String telaLogin() {
+		
 		return "login";
 	}
 	
@@ -35,7 +36,7 @@ public class AcessoController {
 			return "redirect:/home";
 		}
 		
-		model.addAttribute("mensagem", "As credenciais para o e-mail "+ email +" estÃ£o incorretas!");
+		model.addAttribute("mensagem", "As credenciais para o e-mail "+ email +" estão incorretas!");
 
 		return telaLogin();
 	}

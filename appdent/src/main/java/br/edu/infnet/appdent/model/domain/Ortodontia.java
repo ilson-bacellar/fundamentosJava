@@ -28,6 +28,8 @@ public class Ortodontia extends Servico {
 		this.microimplante = microimplante;
 	}
 
+	
+	private Integer id;
 	private float manutencao;
 	private int duracaoEmMeses;
 	private boolean microimplante;

@@ -27,4 +27,6 @@
     <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.domain.Usuario"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.repository.AcessoRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 </qualifiedTypeNameHistroy>
