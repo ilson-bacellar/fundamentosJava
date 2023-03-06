@@ -13,6 +13,10 @@
 	<div class="container">
 
 		<h3>Listagem de Pacientes</h3>
+		
+		<form action="/paciente" method="get">
+			<button type="submit">Novo</button>
+		</form>
 
 		<c:if test="${not empty mensagem}">
 			<div class="alert alert-success">

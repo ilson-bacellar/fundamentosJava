@@ -6,6 +6,16 @@ import br.edu.infnet.appdent.model.auxiliar.Constante;
 
 public class Paciente {
 
+	
+	
+public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 public String getNome() throws NomeIncompletoException {
 		
 		if(nome == null || sobrenome == null || ultimoNome == null) {

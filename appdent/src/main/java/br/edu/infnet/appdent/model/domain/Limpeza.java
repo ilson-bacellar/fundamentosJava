@@ -4,6 +4,15 @@ import br.edu.infnet.appdent.model.auxiliar.Constante;
 
 public class Limpeza extends Servico {
 
+		
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public boolean isDessensibilizacao() {
 		return dessensibilizacao;
 	}
