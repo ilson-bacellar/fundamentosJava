@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import br.edu.infnet.appdent.exceptions.NomeIncompletoException;
 import br.edu.infnet.appdent.model.domain.Paciente;
-import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.service.PacienteService;
-import br.edu.infnet.appdent.model.service.ServicoService;
+
+
 
 @Controller
 public class PacienteController {

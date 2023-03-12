@@ -57,7 +57,6 @@ INDEX VERSION 1.131+C:\Dev\workspace-fund-dev-java\.metadata\.plugins\org.eclips
 385899230.index
 3904891148.index
 4064312803.index
-233399624.index
 1216760386.index
 2105234489.index
 715820657.index

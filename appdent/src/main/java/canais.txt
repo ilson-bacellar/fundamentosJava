@@ -1,0 +1,3 @@
+2;resina;resina
+3;porcelana;porcelana
+3;cerâmica;porcelana

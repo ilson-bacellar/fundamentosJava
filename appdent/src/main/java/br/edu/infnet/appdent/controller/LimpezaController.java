@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import br.edu.infnet.appdent.model.domain.Limpeza;
-import br.edu.infnet.appdent.model.domain.Ortodontia;
 import br.edu.infnet.appdent.model.service.LimpezaService;
-import br.edu.infnet.appdent.model.service.ServicoService;
+
 
 @Controller
 public class LimpezaController {

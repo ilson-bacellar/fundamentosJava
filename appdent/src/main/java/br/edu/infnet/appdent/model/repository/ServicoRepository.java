@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import br.edu.infnet.appdent.model.domain.Servico;
 
+
 @Repository
 public class ServicoRepository {
 

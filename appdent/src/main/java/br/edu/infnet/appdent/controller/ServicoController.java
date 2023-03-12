@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import br.edu.infnet.appdent.exceptions.NomeIncompletoException;
-import br.edu.infnet.appdent.model.domain.Paciente;
 import br.edu.infnet.appdent.model.domain.Servico;
 import br.edu.infnet.appdent.model.service.ServicoService;
 
