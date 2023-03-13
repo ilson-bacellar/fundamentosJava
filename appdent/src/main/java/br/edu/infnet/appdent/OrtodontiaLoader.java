@@ -39,7 +39,7 @@ public class OrtodontiaLoader implements ApplicationRunner{
 					
 					campos = linha.split(";");
 					
-					Ortodontia ortodontia = new Ortodontia(campos[0], campos[1], campos[2]);
+					Ortodontia ortodontia = new Ortodontia(campos[0], campos[1], Float.valueOf(campos[2]));
 					ortodontia.setId(1);
 					ortodontiaService.incluir(ortodontia);
 					

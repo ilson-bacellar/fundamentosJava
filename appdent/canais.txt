@@ -1,0 +1,3 @@
+Canal;1º molar inferior esquerdo;500,00
+Canal;2º molar inferior direito;500,00
+Canal;pré-molar superior esquerdo;400,00

@@ -1,5 +1,6 @@
 package br.edu.infnet.appdent.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,7 @@ import br.edu.infnet.appdent.model.service.LimpezaService;
 @Controller
 public class LimpezaController {
 	
+	@Autowired
 	private LimpezaService limpezaService;
 	
 	private String msg;

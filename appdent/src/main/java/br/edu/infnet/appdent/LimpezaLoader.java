@@ -37,7 +37,7 @@ public class LimpezaLoader implements ApplicationRunner{
 					
 					campos = linha.split(";");
 					
-					Limpeza limpeza = new Limpeza(campos[0], campos[1], campos[2]);
+					Limpeza limpeza = new Limpeza(campos[0], campos[1], Float.valueOf(campos[2]);
 					limpeza.setId(1);
 					limpezaService.incluir(limpeza);
 					

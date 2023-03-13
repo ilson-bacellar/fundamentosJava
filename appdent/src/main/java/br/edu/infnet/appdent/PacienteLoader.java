@@ -14,8 +14,6 @@ import br.edu.infnet.appdent.model.service.PacienteService;
 
 
 
-
-
 @Component
 public class PacienteLoader implements ApplicationRunner{
 

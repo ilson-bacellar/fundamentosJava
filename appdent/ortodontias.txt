@@ -1,0 +1,3 @@
+Ortodontia;Aparelho estético;5000,00
+Ortodontia;Aparelho móvel;2000,00
+Ortodontia;Aparelho simples;3000,00
