@@ -1,14 +1,22 @@
 package br.edu.infnet.appdent.model.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import br.edu.infnet.appdent.exceptions.NomeIncompletoException;
 import br.edu.infnet.appdent.exceptions.TelefoneInvalidoException;
 import br.edu.infnet.appdent.model.auxiliar.Constante;
 
+@Entity
+@Table(name = "TPaciente")
 public class Paciente {
 
 	
 	
-public Integer getId() {
+	public Integer getId() {
 		return id;
 	}
 
@@ -16,7 +24,7 @@ public Integer getId() {
 		this.id = id;
 	}
 
-public String getNome() throws NomeIncompletoException {
+	public String getNome() throws NomeIncompletoException {
 		
 		if(nome == null || sobrenome == null || ultimoNome == null) {
 			throw new NomeIncompletoException("O preenchimento do campo 'Nome' é obrigatório");
@@ -90,6 +98,8 @@ public String getNome() throws NomeIncompletoException {
 		this.servicos = servicos;
 	}
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
 	private String sobrenome;
@@ -99,6 +109,7 @@ public String getNome() throws NomeIncompletoException {
 	private String prontuario;
 	private Servico[] servicos;
 
+	
 	public Paciente() {
 		this.nome = Constante.NOME_PADRAO;
 		this.telefone = Constante.DATA_PADRAO;
@@ -106,7 +117,7 @@ public String getNome() throws NomeIncompletoException {
 	}
 	
 	public Paciente(String nome, String telefone) {
-				
+		this();		
 		this.nome = nome;
 		this.telefone = telefone;
 		this.prontuario = Constante.PRONTUARIO_PADRAO;

@@ -39,7 +39,7 @@ public class CanalLoader implements ApplicationRunner{
 					
 					campos = linha.split(";");
 					
-					Canal canal = new Canal(campos[0], campos[1], Float.valueOf(campos[2]);
+					Canal canal = new Canal(campos[0], campos[1], Float.valueOf(campos[2]));
 					canal.setId(1);
 					canalService.incluir(canal);
 					

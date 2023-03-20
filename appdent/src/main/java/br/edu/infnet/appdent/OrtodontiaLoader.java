@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 
 
 import br.edu.infnet.appdent.model.domain.Ortodontia;
-import br.edu.infnet.appdent.model.domain.Paciente;
 import br.edu.infnet.appdent.model.service.OrtodontiaService;
 
 

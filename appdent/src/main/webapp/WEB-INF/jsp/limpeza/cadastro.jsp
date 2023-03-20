@@ -13,21 +13,21 @@
 
 	<div class="container">
 		<form action="/limpeza/incluir" method="post">
-			<h3>Cadastro de Serviços de Ortodontia</h3>
+			<h3>Cadastro de Serviços de Limpeza</h3>
 		
 			<div class="form-group">
 				<label>Nome:</label> 	
-				<input type="text" name="nome" value="Ortodontia" class="form-control">
+				<input type="text" name="nome" value="Limpeza" class="form-control">
 			</div>
 			
 			<div class="form-group">
 				<label>Descrição:</label>
-				<input type="texto" name="descricao" value="Aparelho estético" class="form-control">
+				<input type="texto" name="descricao" value="Jato de bicarbonato" class="form-control">
 			</div>
 			
 			<div class="form-group">
 				<label>Valor:</label>
-				<input type="number" name="valor" value="5000,00" class="form-control">
+				<input type="number" name="valor" value="200,00" class="form-control">
 			</div>
 			
 			<div class="form-group">

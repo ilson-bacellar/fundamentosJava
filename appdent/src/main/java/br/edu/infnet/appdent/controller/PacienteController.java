@@ -52,8 +52,8 @@ public class PacienteController {
 	@GetMapping(value = "/paciente/{id}/excluir")
 	public String excluir(@PathVariable Integer id) throws NomeIncompletoException {
 
-		Paciente paciente = pacienteService.excluir(id);
-		msg = "A exclusão do paciente "+paciente.getNome()+" foi realizada com sucesso!";
+		pacienteService.excluir(id);
+		msg = "A exclusão do paciente ("+id+") foi realizada com sucesso!";
 		
 		return "redirect:/paciente/lista";
 	}

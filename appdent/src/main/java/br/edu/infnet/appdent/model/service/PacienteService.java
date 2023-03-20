@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appdent.model.domain.Paciente;
 import br.edu.infnet.appdent.model.repository.PacienteRepository;
+import br.edu.infnet.appdent.model.repository.SPacienteRepository;
 
 
 
@@ -18,16 +19,16 @@ public class PacienteService {
 	@Autowired
 	private PacienteRepository pacienteRepository;
 	
-	public boolean incluir(Paciente paciente) {
-		return pacienteRepository.incluir(paciente);
+	public Paciente incluir(Paciente paciente) {
+		return pacienteRepository.save(paciente);
 	}
 	
-	public Paciente excluir(Integer key) {
-		return pacienteRepository.excluir(key);
+	public void excluir(Integer key) {
+		pacienteRepository.deleteById(key);
 	}
 	
 	public Collection<Paciente> obterLista(){
-		return pacienteRepository.obterLista();
+		return (Collection<Paciente>) pacienteRepository.findAll();
 	}
 
 }

@@ -10,10 +10,16 @@
 </head>
 <body>
 
+		<c:import url="/WEB-INF/jsp/menu.jsp" />
+
 		<div class="container">
 
 		<h3>Listagem de Serviços de Ortodontia</h3>
-
+		
+		<form action="/ortodontia" method="get">
+			<button type="submit">Novo</button>
+		</form>
+		
 		<c:if test="${not empty mensagem}">
 			<div class="alert alert-success">
 				<strong>Atenção!</strong> ${mensagem}

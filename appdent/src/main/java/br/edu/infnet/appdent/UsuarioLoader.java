@@ -22,37 +22,51 @@ public class UsuarioLoader implements ApplicationRunner {
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		
-		try {
-			String arq = "pacientes.txt";
+//		try {
+//			String arq = "usuarios.txt";
+//			
+//			try {
+//				FileReader fileR = new FileReader(arq);
+//				BufferedReader leitura = new BufferedReader(fileR);
+//				
+//				String linha = leitura.readLine();			
+//				String[] campos = null;
+//
+//				while(linha != null) {
+//					
+//					campos = linha.split(";");
+//					
+//					Usuario usuario = new Usuario(campos[0], campos[1], campos[2]);
+//					usuario.setId(1);
+//					usuarioService.incluir(usuario);
+//					
+//					System.out.println("Inclusão do usuário "+usuario.getNome()+" realizada com sucesso!");
+//
+//					linha = leitura.readLine();
+//				}
+//				
+//				leitura.close();
+//				fileR.close();
+//			} catch (IOException e) {
+//				System.out.println("[ERRO] " + e.getMessage());
+//			} 
+//			
+//		} finally {
+//			System.out.println("Processamento realizado com sucesso!");
+		
+//		Usuario userAdmin = new Usuario("Administrador ", "admin@admin.com", "123");
+//	
+//
+//		usuarioService.incluir(userAdmin);
+//		
+//		System.out.println("Inclusão do administrador "+userAdmin.getNome()+" realizada com sucesso!!!");
+//		
+		for (int i = 0; i < 9; i++) {
+			Usuario usuario = new Usuario("Administrador " + i, "admin"+i+"@admin.com", "0"+i);
 			
-			try {
-				FileReader fileR = new FileReader(arq);
-				BufferedReader leitura = new BufferedReader(fileR);
-				
-				String linha = leitura.readLine();			
-				String[] campos = null;
-
-				while(linha != null) {
-					
-					campos = linha.split(";");
-					
-					Usuario usuario = new Usuario(campos[0], campos[1], campos[2]);
-					usuario.setId(1);
-					usuarioService.incluir(usuario);
-					
-					System.out.println("Inclusão do usuário "+usuario.getNome()+" realizada com sucesso!");
-
-					linha = leitura.readLine();
-				}
-				
-				leitura.close();
-				fileR.close();
-			} catch (IOException e) {
-				System.out.println("[ERRO] " + e.getMessage());
-			} 
-			
-		} finally {
-			System.out.println("Processamento realizado com sucesso!!!");
+			usuarioService.incluir(usuario);
+		
+			System.out.println("Inclusão do usuário "+usuario.getNome()+" realizada com sucesso!");
 		}		
 		
 		
