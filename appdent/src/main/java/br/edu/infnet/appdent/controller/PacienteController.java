@@ -7,9 +7,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 import br.edu.infnet.appdent.exceptions.NomeIncompletoException;
 import br.edu.infnet.appdent.model.domain.Paciente;
+import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.service.PacienteService;
 
 
@@ -40,7 +42,9 @@ public class PacienteController {
 	}
 	
 	@PostMapping(value = "/paciente/incluir")
-	public String incluir(Paciente paciente) throws NomeIncompletoException {
+	public String incluir(Paciente paciente, @SessionAttribute("usuario") Usuario usuario) throws NomeIncompletoException {
+		
+		paciente.setUsuario(usuario);
 		
 		pacienteService.incluir(paciente);
 		

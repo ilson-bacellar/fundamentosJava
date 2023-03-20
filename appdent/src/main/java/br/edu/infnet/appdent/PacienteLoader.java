@@ -7,13 +7,15 @@ import java.io.IOException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import br.edu.infnet.appdent.model.domain.Paciente;
+import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.service.PacienteService;
 
 
-
+@Order(2)
 @Component
 public class PacienteLoader implements ApplicationRunner{
 
@@ -38,8 +40,13 @@ public class PacienteLoader implements ApplicationRunner{
 					
 					campos = linha.split(";");
 					
+					Usuario usuario = new Usuario();
+							usuario.setId(1);
+					
 					Paciente paciente = new Paciente(campos[0], campos[1], campos[2]);
-					paciente.setId(1);
+					//paciente.setId(1);
+					paciente.setUsuario(usuario);
+					
 					pacienteService.incluir(paciente);
 					
 					System.out.println("Inclusão do paciente realizada com sucesso!");

@@ -39,6 +39,7 @@
 					<th>Nome</th>
 					<th>Telefone</th>
 					<th>Prontuário</th>
+					<th>Usuário</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -49,6 +50,7 @@
 						<td>${p.nome}</td>
 						<td>${p.telefone}</td>
 						<td>${p.prontuário}</td>
+						<td>${p.usuario.nome}</td>
 						<td><a href="/paciente/${p.id}/excluir">Excluir</a></td>
 					</tr>
 				</c:forEach>
