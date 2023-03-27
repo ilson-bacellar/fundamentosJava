@@ -38,6 +38,9 @@
 			<thead>
 				<tr>
 					<th>Identificador</th>
+					<th>Nome</th>
+					<th>Descrição</th>
+					<th>Valor</th>
 					<th>Manutencao</th>
 					<th>Duração (em meses)</th>
 					<th>Microimplante</th>
@@ -48,6 +51,9 @@
 				<c:forEach var="o" items="${ortodontias}">
 					<tr>
 						<td>${o.id}</td>
+						<td>${o.nome}</td>
+						<td>${o.descricao}</td>
+						<td>${o.valor}</td>
 						<td>${o.manutencao}</td>
 						<td>${o.duracaoEmMeses}</td>
 						<td>${o.microimplante}</td>

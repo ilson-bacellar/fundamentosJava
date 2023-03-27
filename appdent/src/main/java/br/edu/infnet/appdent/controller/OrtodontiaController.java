@@ -50,8 +50,8 @@ public class OrtodontiaController {
 	@GetMapping(value = "/ortodontia/{id}/excluir")
 	public String excluir(@PathVariable Integer id) {
 
-		Ortodontia ortodontia = ortodontiaService.excluir(id);
-		msg = "A exclusão do serviço de ortodontia "+ortodontia.getNome()+" foi realizada com sucesso!";
+		ortodontiaService.excluir(id);
+		msg = "A exclusão do serviço de ortodontia foi realizada com sucesso!";
 
 		return "redirect:/ortodontia/lista";
 	}

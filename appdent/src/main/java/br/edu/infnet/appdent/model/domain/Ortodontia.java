@@ -1,44 +1,43 @@
 package br.edu.infnet.appdent.model.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import br.edu.infnet.appdent.model.auxiliar.Constante;
 
+@Entity
+@Table(name = "TOrtodontia")
 public class Ortodontia extends Servico {
 
 	
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
+//	public Integer getId() {
+//		return id;
+//	}
+//	public void setId(Integer id) {
+//		this.id = id;
+//	}
 
 	public float getManutencao() {
 		return manutencao;
 	}
-
 	public void setManutencao(float manutencao) {
 		this.manutencao = manutencao;
 	}
-
 	public int getDuracaoEmMeses() {
 		return duracaoEmMeses;
 	}
-
 	public void setDuracaoEmMeses(int duracaoEmMeses) {
 		this.duracaoEmMeses = duracaoEmMeses;
 	}
-	
 	public boolean isMicroimplante() {
 		return microimplante;
 	}
-
 	public void setMicroimplante(boolean microimplante) {
 		this.microimplante = microimplante;
 	}
 
 	
-	private Integer id;
+//	private Integer id;
 	private float manutencao;
 	private int duracaoEmMeses;
 	private boolean microimplante;

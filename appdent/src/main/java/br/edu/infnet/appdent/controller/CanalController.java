@@ -51,8 +51,8 @@ public class CanalController {
 	@GetMapping(value = "/canal/{id}/excluir")
 	public String excluir(@PathVariable Integer id) {
 
-		Canal canal = canalService.excluir(id);
-		msg = "A exclusão do serviço de canal "+canal.getNome()+" foi realizada com sucesso!";
+		canalService.excluir(id);
+		msg = "A exclusão do serviço de canal foi realizada com sucesso!";
 
 		return "redirect:/canal/lista";
 	}

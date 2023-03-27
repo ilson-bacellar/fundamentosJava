@@ -38,6 +38,9 @@
 			<thead>
 				<tr>
 					<th>Identificador</th>
+					<th>Nome</th>
+					<th>Descrição</th>
+					<th>Valor</th>
 					<th>Dessensibilização</th>
 					<th>Clareamento</th>
 					<th>Periodontia</th>
@@ -48,6 +51,9 @@
 				<c:forEach var="l" items="${limpezas}">
 					<tr>
 						<td>${l.id}</td>
+						<td>${l.nome}</td>
+						<td>${l.descricao}</td>
+						<td>${l.valor}</td>
 						<td>${l.dessensibilizacao}</td>
 						<td>${l.clareamento}</td>
 						<td>${l.periodontia}</td>

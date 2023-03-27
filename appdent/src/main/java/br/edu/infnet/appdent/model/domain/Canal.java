@@ -1,43 +1,42 @@
 package br.edu.infnet.appdent.model.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import br.edu.infnet.appdent.model.auxiliar.Constante;
 
+@Entity
+@Table(name = "TCanal")
 public class Canal extends Servico {
 
 	
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
+//	public Integer getId() {
+//		return id;
+//	}
+//	public void setId(Integer id) {
+//		this.id = id;
+//	}
 
 	public int getNumeroSessoes() {
 		return numeroSessoes;
 	}
-
 	public void setNumeroSessoes(int numeroSessoes) {
 		this.numeroSessoes = numeroSessoes;
 	}
-	
 	public String getTipoRestauracao() {
 		return tipoRestauracao;
 	}
-
 	public void setTipoRestauracao(String tipoRestauracao) {
 		this.tipoRestauracao = tipoRestauracao;
 	}
-
 	public String getTipoCoroa() {
 		return tipoCoroa;
 	}
-
 	public void setTipoCoroa(String tipoCoroa) {
 		this.tipoCoroa = tipoCoroa;
 	}
 
-	private Integer id;
+//	private Integer id;
 	private int numeroSessoes;
 	private String tipoRestauracao;
 	private String tipoCoroa;

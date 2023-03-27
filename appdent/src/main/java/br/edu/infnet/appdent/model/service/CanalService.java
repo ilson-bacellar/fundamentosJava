@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appdent.model.domain.Canal;
+import br.edu.infnet.appdent.model.domain.Ortodontia;
+import br.edu.infnet.appdent.model.repository.CCanalRepository;
 import br.edu.infnet.appdent.model.repository.CanalRepository;
 
 
@@ -15,16 +17,20 @@ public class CanalService {
 	@Autowired
 	private CanalRepository canalRepository;
 	
-	public boolean incluir(Canal canal) {
-		return canalRepository.incluir(canal);
+	public Canal incluir(Canal canal) {
+		return canalRepository.save(canal);
 	}
 	
-	public Canal excluir(Integer key) {
-		return canalRepository.excluir(key);
+	public void excluir(Integer id) {
+		canalRepository.deleteById(id);
 	}
 	
 	public Collection<Canal> obterLista(){
-		return canalRepository.obterLista();
+		return (Collection<Canal>) canalRepository.findAll();
+	}
+	
+	public Canal obterPorId(Integer id) {
+		return canalRepository.findById(id).orElse(null);
 	}
 	
 }

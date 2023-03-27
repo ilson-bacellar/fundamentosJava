@@ -49,8 +49,8 @@ public class LimpezaController {
 	@GetMapping(value = "/limpeza/{id}/excluir")
 	public String excluir(@PathVariable Integer id) {
 
-		Limpeza limpeza = limpezaService.excluir(id);
-		msg = "A exclusão do serviço de limpeza "+limpeza.getNome()+" foi realizada com sucesso!";
+		limpezaService.excluir(id);
+		msg = "A exclusão do serviço de limpeza foi realizada com sucesso!";
 		
 		return "redirect:/limpeza/lista";
 	}

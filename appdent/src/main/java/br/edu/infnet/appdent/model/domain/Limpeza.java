@@ -1,43 +1,42 @@
 package br.edu.infnet.appdent.model.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import br.edu.infnet.appdent.model.auxiliar.Constante;
 
+@Entity
+@Table(name = "TLimpeza")
 public class Limpeza extends Servico {
 
 		
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
+//	public Integer getId() {
+//		return id;
+//	}
+//	public void setId(Integer id) {
+//		this.id = id;
+//	}
 
 	public boolean isDessensibilizacao() {
 		return dessensibilizacao;
 	}
-
 	public void setDessensibilizacao(boolean dessensibilizacao) {
 		this.dessensibilizacao = dessensibilizacao;
 	}
-
 	public boolean isClareamento() {
 		return clareamento;
 	}
-
 	public void setClareamento(boolean clareamento) {
 		this.clareamento = clareamento;
 	}
-
 	public boolean getPeriodontia() {
 		return periodontia;
 	}
-
 	public void setPeriodontia(boolean periodontia) {
 		this.periodontia = periodontia;
 	}
 
-	private Integer id;
+//	private Integer id;
 	private boolean dessensibilizacao;
 	private boolean clareamento;
 	private boolean periodontia;

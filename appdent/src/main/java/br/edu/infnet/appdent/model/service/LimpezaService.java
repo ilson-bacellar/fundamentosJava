@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appdent.model.domain.Limpeza;
+import br.edu.infnet.appdent.model.repository.LLimpezaRepository;
 import br.edu.infnet.appdent.model.repository.LimpezaRepository;
 
 
@@ -15,16 +16,20 @@ public class LimpezaService {
 	@Autowired
 	private LimpezaRepository limpezaRepository;
 	
-	public boolean incluir(Limpeza limpeza) {
-		return limpezaRepository.incluir(limpeza);
+	public Limpeza incluir(Limpeza limpeza) {
+		return limpezaRepository.save(limpeza);
 	}
 	
-	public Limpeza excluir(Integer key) {
-		return limpezaRepository.excluir(key);
+	public void excluir(Integer id) {
+		limpezaRepository.deleteById(id);
 	}
 	
 	public Collection<Limpeza> obterLista(){
-		return limpezaRepository.obterLista();
+		return (Collection<Limpeza>) limpezaRepository.findAll();
+	}
+	
+	public Limpeza obterPorId(Integer id) {
+		return limpezaRepository.findById(id).orElse(null);
 	}
 
 	

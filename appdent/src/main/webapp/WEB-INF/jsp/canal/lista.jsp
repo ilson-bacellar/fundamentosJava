@@ -38,6 +38,9 @@
 			<thead>
 				<tr>
 					<th>Identificador</th>
+					<th>Nome</th>
+					<th>Descrição</th>
+					<th>Valor</th>
 					<th>Número de sessões</th>
 					<th>Tipo de restauração</th>
 					<th>Tipo de coroa</th>
@@ -48,6 +51,9 @@
 				<c:forEach var="c" items="${canais}">
 					<tr>
 						<td>${c.id}</td>
+						<td>${c.nome}</td>
+						<td>${c.descricao}</td>
+						<td>${c.valor}</td>
 						<td>${c.numeroSessoes}</td>
 						<td>${c.tipoRestauracao}</td>
 						<td>${c.tipoCoroa}</td>
