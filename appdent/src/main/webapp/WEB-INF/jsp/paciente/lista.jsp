@@ -10,6 +10,8 @@
 </head>
 <body>
 
+	<c:import url="/WEB-INF/jsp/menu.jsp"/>
+
 	<div class="container">
 
 		<h3>Listagem de Pacientes</h3>
@@ -49,7 +51,7 @@
 						<td>${p.id}</td>
 						<td>${p.nome}</td>
 						<td>${p.telefone}</td>
-						<td>${p.prontuário}</td>
+						<td>${p.prontuario}</td>
 						<td>${p.usuario.nome}</td>
 						<td><a href="/paciente/${p.id}/excluir">Excluir</a></td>
 					</tr>

@@ -28,9 +28,9 @@ public class Paciente {
 
 	public String getNome() throws NomeIncompletoException {
 		
-		if(nome == null || sobrenome == null || ultimoNome == null) {
-			throw new NomeIncompletoException("O preenchimento do campo 'Nome' é obrigatório");
-		} 
+//		if(nome == null || sobrenome == null || ultimoNome == null) {
+//			throw new NomeIncompletoException("O preenchimento do campo 'Nome' é obrigatório");
+//		} 
 		
 		StringBuilder sb = new StringBuilder();
 		sb.append(nome.toUpperCase());
