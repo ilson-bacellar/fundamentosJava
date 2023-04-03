@@ -27,12 +27,12 @@
 			
 			<div class="form-group">
 				<label>Valor:</label>
-				<input type="number" name="valor" value="5000,00" class="form-control">
+				<input type="number" name="valor" value="5000" class="form-control">
 			</div>
 			
 			<div class="form-group">
 				<label>Manutenção:</label>
-				<input type="number" name="manutencao" value="700,00" class="form-control">
+				<input type="number" name="manutencao" value="700" class="form-control">
 			</div>
 			
 			<div class="form-group">
@@ -42,7 +42,12 @@
 			
 			<div class="form-group">
 				<label>Microimplante:</label>
-				<input type="radio" name="microimplante" value="" class="form-control">
+				<!-- <input type="radio" name="microimplante" value="false" class="form-control"> --> 
+				<div class="form-check">
+			      <label class="form-check-label">
+			        <input type="checkbox" name="microimplante" value="true" class="form-check-input" >
+			      </label>
+			    </div>
 			</div>
 						
 			<button type="submit">Cadastrar</button>

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appdent.model.domain.Limpeza;
+import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.repository.LLimpezaRepository;
 import br.edu.infnet.appdent.model.repository.LimpezaRepository;
 
@@ -26,6 +27,10 @@ public class LimpezaService {
 	
 	public Collection<Limpeza> obterLista(){
 		return (Collection<Limpeza>) limpezaRepository.findAll();
+	}
+	
+	public Collection<Limpeza> obterLista(Usuario usuario){
+		return (Collection<Limpeza>) limpezaRepository.obterLista(usuario.getId());
 	}
 	
 	public Limpeza obterPorId(Integer id) {

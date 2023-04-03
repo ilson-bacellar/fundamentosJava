@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appdent.model.domain.Limpeza;
 import br.edu.infnet.appdent.model.domain.Ortodontia;
+import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.repository.OOrtodontiaRepository;
 import br.edu.infnet.appdent.model.repository.OrtodontiaRepository;
 
@@ -29,6 +30,10 @@ public class OrtodontiaService {
 	public Collection<Ortodontia> obterLista(){
 		return (Collection<Ortodontia>) ortodontiaRepository.findAll();
 	}
+	
+	public Collection<Ortodontia> obterLista(Usuario usuario){
+		return (Collection<Ortodontia>) ortodontiaRepository.obterLista(usuario.getId());
+	}	
 	
 	public Ortodontia obterPorId(Integer id) {
 		return ortodontiaRepository.findById(id).orElse(null);

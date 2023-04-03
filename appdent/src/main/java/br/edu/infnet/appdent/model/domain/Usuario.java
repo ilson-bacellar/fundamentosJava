@@ -22,8 +22,10 @@ public class Usuario {
 	@OneToMany
 	@JoinColumn(name = "idUsuario")
 	private List<Paciente> pacientes;
-	
-	
+	@OneToMany
+	@JoinColumn(name = "idUsuario")
+	private List<Servico> servicos;
+		
 	public Usuario( ) {
 	}
 	
@@ -80,5 +82,10 @@ public class Usuario {
 	public void setPacientes(List<Paciente> pacientes) {
 		this.pacientes = pacientes;
 	}
-	
+	public List<Servico> getServicos() {
+		return servicos;
+	}
+	public void setServicos(List<Servico> servicos) {
+		this.servicos = servicos;
+	}
 }

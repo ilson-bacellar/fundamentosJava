@@ -6,8 +6,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 import br.edu.infnet.appdent.model.domain.Canal;
+import br.edu.infnet.appdent.model.domain.Limpeza;
+import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.service.CanalService;
 
 
@@ -27,7 +30,7 @@ public class CanalController {
 	}
 	
 	@GetMapping(value = "/canal/lista")
-	public String telaLista(Model model) {
+	public String telaLista(Model model, @SessionAttribute("usuario") Usuario usuario) {
 		
 		model.addAttribute("canais", canalService.obterLista());
 		
@@ -39,7 +42,9 @@ public class CanalController {
 	}
 	
 	@PostMapping(value = "/canal/incluir")
-	public String incluir(Canal canal) {
+	public String incluir(Canal canal, @SessionAttribute("usuario") Usuario usuario) {
+		
+		canal.setUsuario(usuario);
 		
 		canalService.incluir(canal);
 		
@@ -50,9 +55,11 @@ public class CanalController {
 	
 	@GetMapping(value = "/canal/{id}/excluir")
 	public String excluir(@PathVariable Integer id) {
+		
+		Canal canal = canalService.obterPorId(id);
 
 		canalService.excluir(id);
-		msg = "A exclusão do serviço de canal foi realizada com sucesso!";
+		msg = "A exclusão do serviço de canal "+canal.getNome()+" foi realizada com sucesso!";
 
 		return "redirect:/canal/lista";
 	}

@@ -27,7 +27,7 @@
 			
 			<div class="form-group">
 				<label>Valor:</label>
-				<input type="number" name="valor" value="1000,00" class="form-control">
+				<input type="number" name="valor" value="1000" class="form-control">
 			</div>
 			
 			<div class="form-group">

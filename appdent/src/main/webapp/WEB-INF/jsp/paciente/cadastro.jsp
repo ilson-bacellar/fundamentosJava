@@ -27,7 +27,7 @@
 			
 			<div class="form-group">
 				<label>Prontuário:</label>
-				<input type="email" name="email" value="paulo@gmail.com" class="form-control">
+				<input type="prontuario" name="prontuario" value="36 anos, hipertenso" class="form-control">
 			</div>
 						
 			<button type="submit">Cadastrar</button>

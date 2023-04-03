@@ -39,6 +39,7 @@
 					<th>Senha</th>
 					<th>E-mail</th>
 					<th>Pacientes cadastrados</th>
+					<th>Serviços cadastrados</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -50,6 +51,7 @@
 						<td>${u.senha}</td>
 						<td>${u.email}</td>
 						<td>${u.pacientes.size()}</td>
+						<td>${u.servicos.size()}</td>
 						<td><a href="/usuario/${u.id}/excluir">Excluir</a></td>
 					</tr>
 				</c:forEach>

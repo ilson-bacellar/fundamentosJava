@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appdent.model.domain.Canal;
 import br.edu.infnet.appdent.model.domain.Ortodontia;
+import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.repository.CCanalRepository;
 import br.edu.infnet.appdent.model.repository.CanalRepository;
 
@@ -26,7 +27,11 @@ public class CanalService {
 	}
 	
 	public Collection<Canal> obterLista(){
-		return (Collection<Canal>) canalRepository.findAll();
+		return (Collection<Canal>) canalRepository.findAll();	
+	}
+	
+	public Collection<Canal> obterLista(Usuario usuario){
+		return (Collection<Canal>) canalRepository.obterLista(usuario.getId());
 	}
 	
 	public Canal obterPorId(Integer id) {

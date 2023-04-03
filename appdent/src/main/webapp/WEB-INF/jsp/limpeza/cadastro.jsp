@@ -22,27 +22,42 @@
 			
 			<div class="form-group">
 				<label>Descrição:</label>
-				<input type="texto" name="descricao" value="Jato de bicarbonato" class="form-control">
+				<input type="text" name="descricao" value="Jato de bicarbonato" class="form-control">
 			</div>
 			
 			<div class="form-group">
 				<label>Valor:</label>
-				<input type="number" name="valor" value="200,00" class="form-control">
+				<input type="number" name="valor" value="200" class="form-control">
 			</div>
 			
 			<div class="form-group">
 				<label>Dessensibilização:</label>
-				<input type="radio" name="dessensibilizacao" value="" class="form-control">
+				<!--  <input type="radio" name="dessensibilizacao" value="false" class="form-control"> --> 
+				 <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="checkbox" name="dessensibilizacao" value="true" class="form-check-input" >
+			      </label>
+			    </div>
 			</div>
 			
 			<div class="form-group">
 				<label>Clareamento:</label>
-				<input type="radio" name="clareamento" value="" class="form-control">
+			<!--	<input type="radio" name="clareamento" value="false" class="form-control"> --> 
+				<div class="form-check">
+			      <label class="form-check-label">
+			        <input type="checkbox" name="clareamento" value="true" class="form-check-input" >
+			      </label>
+			    </div>
 			</div>
 			
 			<div class="form-group">
 				<label>Periodontia:</label>
-				<input type="radio" name="periodontia" value="" class="form-control">
+				<!--	<input type="radio" name="periodontia" value="false" class="form-control"> --> 
+				<div class="form-check">
+			      <label class="form-check-label">
+			        <input type="checkbox" name="periodontia" value="true" class="form-check-input" >
+			      </label>
+			    </div>
 			</div>
 						
 			<button type="submit">Cadastrar</button>
