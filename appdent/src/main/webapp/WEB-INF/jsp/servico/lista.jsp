@@ -16,6 +16,8 @@
 </head>
 <body>
 
+	<c:import url="/WEB-INF/jsp/menu.jsp" />
+
 	<div class="container">
 
 		<h3>Listagem de Serviços</h3>

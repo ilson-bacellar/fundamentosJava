@@ -22,17 +22,17 @@
 		
 			<div class="form-group">
 				<label>Nome:</label> 	
-				<input type="text" name="nome" value="Paulo Lima Torres" class="form-control">
+				<input type="text" name="nome" value="Caio Lima Torres" class="form-control">
 			</div>
 			
 			<div class="form-group">
 				<label>Telefone:</label>
-				<input type="text" name="telefone" value="22222222" class="form-control">
+				<input type="text" name="telefone" value="21333635" class="form-control">
 			</div>
 			
 			<div class="form-group">
 				<label>Prontuário:</label>
-				<input type="prontuario" name="prontuario" value="36 anos, hipertenso" class="form-control">
+				<input type="text" name="prontuario" value="36 anos, hipertenso" class="form-control">
 			</div>
 						
 			<button type="submit">Cadastrar</button>

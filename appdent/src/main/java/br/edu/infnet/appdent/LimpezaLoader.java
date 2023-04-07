@@ -29,7 +29,7 @@ public class LimpezaLoader implements ApplicationRunner{
 		Usuario admin = new Usuario();
 		admin.setId(1);
 		
-		Limpeza limpeza = new Limpeza("Limpeza", "flúor", 300);
+		Limpeza limpeza = new Limpeza("Limpeza", "Aplicaçao de Fluor", 300);
 		limpeza.setDessensibilizacao(true);
 		limpeza.setClareamento(false);
 		limpeza.setPeriodontia(false);
@@ -38,7 +38,7 @@ public class LimpezaLoader implements ApplicationRunner{
 		
 		limpezaService.incluir(limpeza);
 		
-		Limpeza l2 = new Limpeza("Limpeza", "bicarbonato", 200);
+		Limpeza l2 = new Limpeza("Limpeza", "Jato de Bicarbonato", 200);
 		l2.setDessensibilizacao(false);
 		l2.setClareamento(true);
 		l2.setPeriodontia(false);
@@ -47,7 +47,7 @@ public class LimpezaLoader implements ApplicationRunner{
 		
 		limpezaService.incluir(l2);
 		
-		Limpeza l3 = new Limpeza("Limpeza", "tártaro", 500);
+		Limpeza l3 = new Limpeza("Limpeza", "Tartarectomia", 500);
 		l3.setDessensibilizacao(true);
 		l3.setClareamento(true);
 		l3.setPeriodontia(true);

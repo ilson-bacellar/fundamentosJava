@@ -33,28 +33,28 @@ public class CanalLoader implements ApplicationRunner{
 		admin.setId(1);
 		
 		
-			Canal canal = new Canal("Canal", "1º molar inferior direito", 1000);
+			Canal canal = new Canal("Endodontia", "Canal", 1000);
 			canal.setNumeroSessoes(3);
-			canal.setTipoRestauracao("amálgama");
-			canal.setTipoCoroa("zircônia");
+			canal.setTipoRestauracao("Amalgama");
+			canal.setTipoCoroa("Zirconia");
 			canal.setUsuario(admin);
 			canal.imprimir();
 		
 			canalService.incluir(canal);
 			
-			Canal c2 = new Canal("Canal", "2º molar superior esquerdo", 900);
-			c2.setNumeroSessoes(2);
-			c2.setTipoRestauracao("ouro");
-			c2.setTipoCoroa("cerâmica");
+			Canal c2 = new Canal("Endodontia", "Carie", 500);
+			c2.setNumeroSessoes(1);
+			c2.setTipoRestauracao("Porcelana");
+			c2.setTipoCoroa("Ceramica");
 			c2.setUsuario(admin);
 			c2.imprimir();
 			
 			canalService.incluir(c2);
 						
-			Canal c3 = new Canal("Canal", "incisivo lateral inferior esquerdo", 800);
-			c3.setNumeroSessoes(1);
-			c3.setTipoRestauracao("porcelana");
-			c3.setTipoCoroa("resina");
+			Canal c3 = new Canal("Endodontia", "Traumatismo", 600);
+			c3.setNumeroSessoes(2);
+			c3.setTipoRestauracao("Porcelana");
+			c3.setTipoCoroa("Resina");
 			c3.setUsuario(admin);
 			c3.imprimir();
 			

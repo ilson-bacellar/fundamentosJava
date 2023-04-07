@@ -20,20 +20,7 @@
 		<form action="/canal/incluir" method="post">
 			<h3>Cadastro de Serviços de Canal</h3>
 		
-			<div class="form-group">
-				<label>Nome:</label> 	
-				<input type="text" name="nome" value="Canal" class="form-control">
-			</div>
-			
-			<div class="form-group">
-				<label>Descrição:</label>
-				<input type="texto" name="descricao" value="Pré-molar inferior direito" class="form-control">
-			</div>
-			
-			<div class="form-group">
-				<label>Valor:</label>
-				<input type="number" name="valor" value="1000" class="form-control">
-			</div>
+			<c:import url="/WEB-INF/jsp/servico/cadastro.jsp" />
 			
 			<div class="form-group">
 				<label>Número de sessões:</label>
@@ -47,7 +34,7 @@
 			
 			<div class="form-group">
 				<label>Tipo de coroa:</label>
-				<input type="text" name="tipoCoroa" value="Provisória" class="form-control">
+				<input type="text" name="tipoCoroa" value="Provisoria" class="form-control">
 			</div>
 						
 			<button type="submit">Cadastrar</button>

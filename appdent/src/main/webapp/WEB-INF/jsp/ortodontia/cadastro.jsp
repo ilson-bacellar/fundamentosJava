@@ -20,20 +20,7 @@
 		<form action="/ortodontia/incluir" method="post">
 			<h3>Cadastro de Serviços de Ortodontia</h3>
 		
-			<div class="form-group">
-				<label>Nome:</label> 	
-				<input type="text" name="nome" value="Ortodontia" class="form-control">
-			</div>
-			
-			<div class="form-group">
-				<label>Descrição:</label>
-				<input type="texto" name="descricao" value="Aparelho estético" class="form-control">
-			</div>
-			
-			<div class="form-group">
-				<label>Valor:</label>
-				<input type="number" name="valor" value="5000" class="form-control">
-			</div>
+			<c:import url="/WEB-INF/jsp/servico/cadastro.jsp" />
 			
 			<div class="form-group">
 				<label>Manutenção:</label>

@@ -32,7 +32,7 @@ public class OrtodontiaLoader implements ApplicationRunner{
 		admin.setId(1);
 		
 		
-		Ortodontia ortodontia = new Ortodontia("Aparelho", "estético", 5000);
+		Ortodontia ortodontia = new Ortodontia("Aparelho", "Estetico", 5000);
 		ortodontia.setManutencao(600);
 		ortodontia.setDuracaoEmMeses(48);
 		ortodontia.setMicroimplante(true);
@@ -41,7 +41,7 @@ public class OrtodontiaLoader implements ApplicationRunner{
 		
 		ortodontiaService.incluir(ortodontia);
 		
-		Ortodontia o2 = new Ortodontia("Aparelho", "simples", 4000);
+		Ortodontia o2 = new Ortodontia("Aparelho", "Metal", 4000);
 		o2.setManutencao(500);
 		o2.setDuracaoEmMeses(36);
 		o2.setMicroimplante(false);
@@ -50,7 +50,7 @@ public class OrtodontiaLoader implements ApplicationRunner{
 		
 		ortodontiaService.incluir(o2);
 		
-		Ortodontia o3 = new Ortodontia("Aparelho", "móvel", 3000);
+		Ortodontia o3 = new Ortodontia("Aparelho", "Movel", 3000);
 		o3.setManutencao(400);
 		o3.setDuracaoEmMeses(24);
 		o3.setMicroimplante(false);

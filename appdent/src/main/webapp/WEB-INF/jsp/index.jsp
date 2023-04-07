@@ -21,7 +21,7 @@
 	
 	<c:import url="/WEB-INF/jsp/menu.jsp"/>
 	
-	<img src="/images/bruce_shark.png" alt="Shark">
+	<img src="/images/bruce_shark_3.png" alt="Shark">
 	
 </body>
 </html>

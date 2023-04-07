@@ -1,41 +1,18 @@
 package br.edu.infnet.appdent.model.repository;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
+
 
 import br.edu.infnet.appdent.model.domain.Servico;
 
-
 @Repository
-public class ServicoRepository {
+public interface ServicoRepository extends CrudRepository<Servico, Integer>{
 
-	private static Integer id = 1;
-	
-	private static Map<Integer, Servico> mapaServico = new HashMap<Integer, Servico>();
-
-	public boolean incluir(Servico servico) {
+	@Query("from Servico s where s.usuario.id =:userId")
+	List<Servico> obterLista(Integer userId);
 		
-		servico.setId(id++);
-
-		try {
-			mapaServico.put(servico.getId(), servico);
-			return true;
-		} catch (Exception e) {
-			return false;
-		}
-		
-	}
-	
-	public Servico excluir(Integer key) {
-
-		return mapaServico.remove(key);
-	}
-
-	public Collection<Servico> obterLista(){
-		return mapaServico.values();
-	}
-	
 }
