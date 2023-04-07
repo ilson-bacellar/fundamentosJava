@@ -11,6 +11,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import br.edu.infnet.appdent.model.domain.Canal;
+import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.repository.CanalRepository;
 import br.edu.infnet.appdent.model.repository.OrtodontiaRepository;
 import br.edu.infnet.appdent.model.service.CanalService;
@@ -28,14 +29,40 @@ public class CanalLoader implements ApplicationRunner{
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		
-		Canal canal = new Canal("Canal", "1º molar inferior direito", 1000);
-		canal.setNumeroSessoes(3);
-		canal.setTipoRestauracao("amálgama");
-		canal.setTipoCoroa("zircônia");
-		canal.imprimir();
+		Usuario admin = new Usuario();
+		admin.setId(1);
 		
-		canalService.incluir(canal);
 		
+			Canal canal = new Canal("Canal", "1º molar inferior direito", 1000);
+			canal.setNumeroSessoes(3);
+			canal.setTipoRestauracao("amálgama");
+			canal.setTipoCoroa("zircônia");
+			canal.setUsuario(admin);
+			canal.imprimir();
+		
+			canalService.incluir(canal);
+			
+			Canal c2 = new Canal("Canal", "2º molar superior esquerdo", 900);
+			c2.setNumeroSessoes(2);
+			c2.setTipoRestauracao("ouro");
+			c2.setTipoCoroa("cerâmica");
+			c2.setUsuario(admin);
+			c2.imprimir();
+			
+			canalService.incluir(c2);
+						
+			Canal c3 = new Canal("Canal", "incisivo lateral inferior esquerdo", 800);
+			c3.setNumeroSessoes(1);
+			c3.setTipoRestauracao("porcelana");
+			c3.setTipoCoroa("resina");
+			c3.setUsuario(admin);
+			c3.imprimir();
+			
+			canalService.incluir(c3);
+			
+			
+			
+			
 		
 //		try {
 //			String arq = "canais.txt";

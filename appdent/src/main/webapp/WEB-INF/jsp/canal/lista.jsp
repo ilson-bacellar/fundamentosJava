@@ -7,6 +7,11 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<meta charset="ISO-8859-1">
 	<title>Listagem de Serviços de Canal</title>
+	<style>
+      body {
+      	background-image: radial-gradient(ellipse, #1397e3, #9eecf8);
+      }
+     </style>
 </head>
 <body>
 

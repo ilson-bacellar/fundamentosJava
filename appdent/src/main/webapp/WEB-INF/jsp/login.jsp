@@ -6,6 +6,15 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 	<meta charset="ISO-8859-1">
 	<title>AppDent</title>
+	 <style>
+      body {
+      	background-image: url("images/bg11.jpg");
+      	background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+      }
+    </style>
 </head>
 <body>
 

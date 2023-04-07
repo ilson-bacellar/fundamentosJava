@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 import br.edu.infnet.appdent.model.domain.Limpeza;
 import br.edu.infnet.appdent.model.domain.Paciente;
+import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.repository.LimpezaRepository;
 import br.edu.infnet.appdent.model.service.LimpezaService;
 
@@ -25,13 +26,35 @@ public class LimpezaLoader implements ApplicationRunner{
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		
+		Usuario admin = new Usuario();
+		admin.setId(1);
+		
 		Limpeza limpeza = new Limpeza("Limpeza", "flúor", 300);
 		limpeza.setDessensibilizacao(true);
 		limpeza.setClareamento(false);
 		limpeza.setPeriodontia(false);
+		limpeza.setUsuario(admin);
 		limpeza.imprimir();
 		
 		limpezaService.incluir(limpeza);
+		
+		Limpeza l2 = new Limpeza("Limpeza", "bicarbonato", 200);
+		l2.setDessensibilizacao(false);
+		l2.setClareamento(true);
+		l2.setPeriodontia(false);
+		l2.setUsuario(admin);
+		l2.imprimir();
+		
+		limpezaService.incluir(l2);
+		
+		Limpeza l3 = new Limpeza("Limpeza", "tártaro", 500);
+		l3.setDessensibilizacao(true);
+		l3.setClareamento(true);
+		l3.setPeriodontia(true);
+		l3.setUsuario(admin);
+		l3.imprimir();
+		
+		limpezaService.incluir(l3);
 		
 		
 //		try {

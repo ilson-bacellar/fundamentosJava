@@ -6,6 +6,15 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<meta charset="ISO-8859-1">
 	<title>Cadastro de Usuários</title>
+	<style>
+      body {
+      	background-image: url("images/bg9.jpg");
+      	background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+      }
+     </style>
 </head>
 <body>
 

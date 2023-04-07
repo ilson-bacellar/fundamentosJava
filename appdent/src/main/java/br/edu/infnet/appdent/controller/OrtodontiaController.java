@@ -31,7 +31,7 @@ public class OrtodontiaController {
 	@GetMapping(value = "/ortodontia/lista")
 	public String telaLista(Model model, @SessionAttribute("usuario") Usuario usuario) {
 		
-		model.addAttribute("ortodontias", ortodontiaService.obterLista());
+		model.addAttribute("ortodontias", ortodontiaService.obterLista(usuario));
 		
 		model.addAttribute("mensagem", msg);
 		

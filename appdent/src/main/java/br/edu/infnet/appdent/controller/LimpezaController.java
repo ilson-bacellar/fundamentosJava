@@ -31,7 +31,7 @@ public class LimpezaController {
 	@GetMapping(value = "/limpeza/lista")
 	public String telaLista(Model model, @SessionAttribute("usuario") Usuario usuario) {
 		
-		model.addAttribute("limpezas", limpezaService.obterLista());
+		model.addAttribute("limpezas", limpezaService.obterLista(usuario));
 		
 		model.addAttribute("mensagem", msg);
 		

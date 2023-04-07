@@ -32,7 +32,7 @@ public class CanalController {
 	@GetMapping(value = "/canal/lista")
 	public String telaLista(Model model, @SessionAttribute("usuario") Usuario usuario) {
 		
-		model.addAttribute("canais", canalService.obterLista());
+		model.addAttribute("canais", canalService.obterLista(usuario));
 		
 		model.addAttribute("mensagem", msg);
 		

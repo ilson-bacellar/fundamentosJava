@@ -21,6 +21,13 @@ public class UsuarioLoader implements ApplicationRunner {
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 			
+		Usuario userAdmin = new Usuario("Administrador ", "admin@admin.com", "123");
+		
+		usuarioService.incluir(userAdmin);
+		
+		System.out.println("Inclusão do administrador "+userAdmin.getNome()+" realizada com sucesso!!!");
+		
+		
 		for (int i = 0; i < 10; i++) {
 			Usuario usuario = new Usuario("Administrador " + i, "admin"+i+"@admin.com", "0"+i);
 			

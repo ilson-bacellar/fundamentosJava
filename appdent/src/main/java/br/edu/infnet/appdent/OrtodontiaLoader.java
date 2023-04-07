@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 
 import br.edu.infnet.appdent.model.domain.Ortodontia;
+import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.repository.LimpezaRepository;
 import br.edu.infnet.appdent.model.repository.OrtodontiaRepository;
 import br.edu.infnet.appdent.model.service.OrtodontiaService;
@@ -27,15 +28,36 @@ public class OrtodontiaLoader implements ApplicationRunner{
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		
+		Usuario admin = new Usuario();
+		admin.setId(1);
+		
 		
 		Ortodontia ortodontia = new Ortodontia("Aparelho", "estético", 5000);
 		ortodontia.setManutencao(600);
 		ortodontia.setDuracaoEmMeses(48);
 		ortodontia.setMicroimplante(true);
+		ortodontia.setUsuario(admin);
 		ortodontia.imprimir();
 		
 		ortodontiaService.incluir(ortodontia);
 		
+		Ortodontia o2 = new Ortodontia("Aparelho", "simples", 4000);
+		o2.setManutencao(500);
+		o2.setDuracaoEmMeses(36);
+		o2.setMicroimplante(false);
+		o2.setUsuario(admin);
+		o2.imprimir();
+		
+		ortodontiaService.incluir(o2);
+		
+		Ortodontia o3 = new Ortodontia("Aparelho", "móvel", 3000);
+		o3.setManutencao(400);
+		o3.setDuracaoEmMeses(24);
+		o3.setMicroimplante(false);
+		o3.setUsuario(admin);
+		o3.imprimir();
+		
+		ortodontiaService.incluir(o3);
 		
 		
 //		try {

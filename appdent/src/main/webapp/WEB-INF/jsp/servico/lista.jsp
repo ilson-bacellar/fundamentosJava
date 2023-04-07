@@ -6,8 +6,13 @@
 <head>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<meta charset="ISO-8859-1">
-<title>Listagem de Serviços</title>
+	<meta charset="ISO-8859-1">
+	<title>Listagem de Serviços</title>
+	<style>
+      body {
+      	background-image: radial-gradient(ellipse, #1397e3, #9eecf8);
+      }
+     </style>
 </head>
 <body>
 
