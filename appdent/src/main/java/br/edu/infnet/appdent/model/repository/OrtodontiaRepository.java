@@ -12,7 +12,7 @@ import br.edu.infnet.appdent.model.domain.Ortodontia;
 @Repository
 public interface OrtodontiaRepository extends CrudRepository<Ortodontia, Integer>{
 	
-	@Query("from Ortodontia o where o.usuario.id")
+	@Query("from Ortodontia o where o.usuario.id = :userId")
 	List<Ortodontia> obterLista(Integer userId);
 
 }

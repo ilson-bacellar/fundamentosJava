@@ -12,7 +12,7 @@ import br.edu.infnet.appdent.model.domain.Limpeza;
 @Repository
 public interface LimpezaRepository extends CrudRepository<Limpeza, Integer>{
 
-	@Query("from Limpeza l where l.usuario.id")
+	@Query("from Limpeza l where l.usuario.id = :userId")
 	List<Limpeza> obterLista(Integer userId);
 		
 }

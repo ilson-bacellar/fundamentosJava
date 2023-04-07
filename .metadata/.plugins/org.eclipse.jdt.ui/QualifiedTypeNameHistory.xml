@@ -35,13 +35,9 @@
     <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.repository.PacienteRepository"/>
     <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.repository.UsuarioRepository"/>
     <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.service.UsuarioService"/>
-    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
-    <fullyQualifiedTypeName name="antlr.collections.List"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
-    <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.domain.Usuario"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.SessionAttribute"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.repository.LimpezaRepository"/>
     <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.repository.OrtodontiaRepository"/>
     <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.repository.CanalRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
+    <fullyQualifiedTypeName name="antlr.collections.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="br.edu.infnet.appdent.model.domain.Usuario"/>
 </qualifiedTypeNameHistroy>
