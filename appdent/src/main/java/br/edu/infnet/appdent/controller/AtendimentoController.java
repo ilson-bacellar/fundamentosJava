@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 import br.edu.infnet.appdent.model.domain.Atendimento;
 import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.service.AtendimentoService;
+import br.edu.infnet.appdent.model.service.PacienteService;
 
 
 @Controller
@@ -20,10 +21,16 @@ public class AtendimentoController {
 	@Autowired
 	private AtendimentoService atendimentoService;
 	
+	@Autowired
+	private PacienteService pacienteService;
+	
 	private String msg;
 
 	@GetMapping(value = "/atendimento")
-	public String telaCadastro() {
+	public String telaCadastro(Model model, @SessionAttribute("usuario") Usuario usuario) {
+		
+		model.addAttribute("pacientes", pacienteService.obterLista(usuario));
+		
 		return "atendimento/cadastro";
 	}
 	

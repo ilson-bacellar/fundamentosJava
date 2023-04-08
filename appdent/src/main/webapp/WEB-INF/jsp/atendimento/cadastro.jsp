@@ -38,6 +38,34 @@
 				<label>Observações:</label>
 				<input type="text" name="obs" value="" class="form-control">
 			</div>
+			
+			<div class="form-group">
+				<label>Paciente:</label>
+				<select name="paciente.id" class="form-control">
+				<c:forEach var="p" items="${pacientes}">
+					<option value="${p.id}">${p.nome}</option>
+				</c:forEach>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<label>Serviços:</label>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="checkbox" name="caracteristicas" value="De" class="form-check-input" > Developer
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="checkbox" name="caracteristicas" value="An" checked class="form-check-input"> Analista
+			      </label>
+			    </div>
+			    <div class="form-check">
+			      <label class="form-check-label">
+		        		<input type="checkbox" name="caracteristicas" value="Da" class="form-check-input"> Database
+			      </label>
+			    </div>
+			</div>
 						
 			<button type="submit">Cadastrar</button>
 		</form>
