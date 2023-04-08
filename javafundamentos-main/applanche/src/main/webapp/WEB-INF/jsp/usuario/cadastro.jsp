@@ -64,7 +64,7 @@
 			    </div>
 			    <div class="form-check">
 			      <label class="form-check-label">
-		        		<input type="checkbox" name="caracteristicas" value="Da" class="form-check-input"> Database
+		        	<input type="checkbox" name="caracteristicas" value="Da" class="form-check-input"> Database
 			      </label>
 			    </div>
 			</div>

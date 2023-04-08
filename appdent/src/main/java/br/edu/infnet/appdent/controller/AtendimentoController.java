@@ -28,8 +28,8 @@ public class AtendimentoController {
 
 	@GetMapping(value = "/atendimento")
 	public String telaCadastro(Model model, @SessionAttribute("usuario") Usuario usuario) {
-		
-		model.addAttribute("pacientes", pacienteService.obterLista(usuario));
+
+		model.addAttribute("pacientes", pacienteService.obterLista());
 		
 		return "atendimento/cadastro";
 	}

@@ -2,15 +2,15 @@
 
 <div class="form-group">
 	<label>Nome:</label> 
-	<input type="text" name="nome" value="Limpeza" class="form-control">
+	<input type="text" name="nome" value="Limpeza Ortodontia ou Canal " class="form-control">
 </div>
 
 <div class="form-group">
 	<label>Descrição:</label> 
-	<input type="text" name="descricao" value="Jato de Bicarbonato" class="form-control">
+	<input type="text" name="descricao" value="Especificar servico" class="form-control">
 </div>
 
 <div class="form-group">
 	<label>Valor:</label> 
-	<input type="number" name="valor" value="200" class="form-control">
+	<input type="number" name="valor" value="0" class="form-control">
 </div>
