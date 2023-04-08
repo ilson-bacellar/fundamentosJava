@@ -46,6 +46,8 @@
 					<th>Data</th>
 					<th>Pagamento</th>
 					<th>Observações</th>
+					<th>Paciente</th>
+					<th>Servicos</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -56,6 +58,8 @@
 						<td>${a.data}</td>
 						<td>${a.pagamento}</td>
 						<td>${a.obs}</td>
+						<td>${a.paciente.nome}</td>
+						<td>${a.servicos.size()}</td>
 						<td><a href="/atendimento/${a.id}/excluir">Excluir</a></td>
 					</tr>
 				</c:forEach>

@@ -12,7 +12,7 @@ import br.edu.infnet.appdent.model.domain.Servico;
 @Repository
 public interface ServicoRepository extends CrudRepository<Servico, Integer>{
 
-	@Query("from Servico s where s.usuario.id =:userId")
+	@Query("from Servico s where s.usuario.id = :userId")
 	List<Servico> obterLista(Integer userId);
 		
 }

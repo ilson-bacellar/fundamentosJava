@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<c:import url="/WEB-INF/jsp/menu.jsp"/>
+	<c:import url="/WEB-INF/jsp/menu.jsp"/>
 
 	<div class="container">
 		<form action="/atendimento/incluir" method="post">
@@ -22,12 +22,16 @@
 		
 			<div class="form-group">
 				<label>Data:</label> 	
-				<input type="date" name="data" value="0103.2023." class="form-control">
+				<input type="text" name="data" value="" class="form-control">
 			</div>
 			
 			<div class="form-group">
 				<label>Pagamento:</label>
-				<input type="radio" name="pagamento" value="" class="form-control">
+				<div class="form-check">
+			      <label class="form-check-label">
+			        <input type="checkbox" name="pagamento" value="true" class="form-check-input" >
+			      </label>
+			    </div>
 			</div>
 			
 			<div class="form-group">

@@ -16,100 +16,6 @@ import br.edu.infnet.appdent.model.auxiliar.Constante;
 @Table(name = "TPaciente")
 public class Paciente {
 
-	
-	
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getNome() throws NomeIncompletoException {
-		
-//		if(nome == null || sobrenome == null || ultimoNome == null) {
-//			throw new NomeIncompletoException("O preenchimento do campo 'Nome' é obrigatório");
-//		} 
-		
-		StringBuilder sb = new StringBuilder();
-		sb.append(nome.toUpperCase());
-		sb.append(" ");
-		sb.append(sobrenome);
-		sb.append(" ");
-		sb.append(ultimoNome);
-		return sb.toString();
-	}
-	
-	public void setNome(String nome) throws NomeIncompletoException {
-		
-		if(nome == null) {
-			throw new NomeIncompletoException("O preenchimento do campo 'Nome' é obrigatório");
-		}
-		
-		int posInicial = nome.indexOf(" ");
-		int posFinal = nome.lastIndexOf(" ");
-		
-		if(posInicial < 0 || posFinal < 0) {
-			throw new NomeIncompletoException("O preenchimento do campo 'Nome' está incorreto");
-		}
-		
-		this.nome = nome.substring(0, posInicial);
-		this.sobrenome = nome.substring(posInicial, posFinal).trim();
-		this.ultimoNome = nome.substring(posFinal).trim();
-	}
-	
-	public String getTelefone() throws TelefoneInvalidoException {
-		
-		if(telefone == null) {
-			throw new TelefoneInvalidoException("O preenchimento do campo 'Telefone' é obrigatório");
-		}
-		
-		StringBuilder sb = new StringBuilder();
-		sb.append(telefone);
-		sb.append("-");
-		sb.append(telefoneFinal);
-		return sb.toString();
-	}
-	
-	public void setTelefone(String telefone) throws TelefoneInvalidoException {
-		
-		if(telefone == null) {
-			throw new TelefoneInvalidoException("O preenchimento do campo 'Telefone' é obrigatório");
-		}
-				
-		if(telefone.length() != 8) {
-			throw new TelefoneInvalidoException("O preenchimento do campo 'Telefone' está incorreto");
-		}
-		
-		this.telefone = telefone.substring(0, 4);
-		this.telefoneFinal = telefone.substring(4);
-	}
-	
-	public String getProntuario() {
-		return prontuario;
-	}
-	public void setProntuario(String prontuario) {
-		this.prontuario = prontuario;
-	}
-		
-	public Servico[] getServicos() {
-		return servicos;
-	}
-	public void setServicos(Servico[] servicos) {
-		this.servicos = servicos;
-	}
-	
-	
-	public Usuario getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
-
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -127,7 +33,7 @@ public class Paciente {
 	
 	public Paciente() {
 		this.nome = Constante.NOME_PADRAO;
-		this.telefone = Constante.DATA_PADRAO;
+		this.telefone = Constante.TELEFONE_PADRAO;
 		this.prontuario = Constante.PRONTUARIO_PADRAO;
 	}
 	
@@ -172,6 +78,89 @@ public class Paciente {
 		imprimirServicos();
 		
 		System.out.println("");
+	}
+	
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getNome() throws NomeIncompletoException {
+		
+//		if(nome == null || sobrenome == null || ultimoNome == null) {
+//			throw new NomeIncompletoException("O preenchimento do campo 'Nome' é obrigatório");
+//		} 
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append(nome.toUpperCase());
+		sb.append(" ");
+		sb.append(sobrenome);
+		sb.append(" ");
+		sb.append(ultimoNome);
+		return sb.toString();
+	}
+	public void setNome(String nome) throws NomeIncompletoException {
+		
+		if(nome == null) {
+			throw new NomeIncompletoException("O preenchimento do campo 'Nome' é obrigatório");
+		}
+		
+		int posInicial = nome.indexOf(" ");
+		int posFinal = nome.lastIndexOf(" ");
+		
+		if(posInicial < 0 || posFinal < 0) {
+			throw new NomeIncompletoException("O preenchimento do campo 'Nome' está incorreto");
+		}
+		
+		this.nome = nome.substring(0, posInicial);
+		this.sobrenome = nome.substring(posInicial, posFinal).trim();
+		this.ultimoNome = nome.substring(posFinal).trim();
+	}
+	public String getTelefone() throws TelefoneInvalidoException {
+		
+		if(telefone == null) {
+			throw new TelefoneInvalidoException("O preenchimento do campo 'Telefone' é obrigatório");
+		}
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append(telefone);
+		sb.append("-");
+		sb.append(telefoneFinal);
+		return sb.toString();
+	}
+	public void setTelefone(String telefone) throws TelefoneInvalidoException {
+		
+		if(telefone == null) {
+			throw new TelefoneInvalidoException("O preenchimento do campo 'Telefone' é obrigatório");
+		}
+				
+		if(telefone.length() != 8) {
+			throw new TelefoneInvalidoException("O preenchimento do campo 'Telefone' está incorreto");
+		}
+		
+		this.telefone = telefone.substring(0, 4);
+		this.telefoneFinal = telefone.substring(4);
+	}
+	public String getProntuario() {
+		return prontuario;
+	}
+	public void setProntuario(String prontuario) {
+		this.prontuario = prontuario;
+	}
+		
+	public Servico[] getServicos() {
+		return servicos;
+	}
+	public void setServicos(Servico[] servicos) {
+		this.servicos = servicos;
+	}
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	
 	

@@ -25,6 +25,9 @@ public class Usuario {
 	@OneToMany
 	@JoinColumn(name = "idUsuario")
 	private List<Servico> servicos;
+	@OneToMany
+	@JoinColumn(name = "idUsuario")
+	private List<Atendimento> atendimentos;
 		
 	public Usuario( ) {
 	}
@@ -88,4 +91,11 @@ public class Usuario {
 	public void setServicos(List<Servico> servicos) {
 		this.servicos = servicos;
 	}
+	public List<Atendimento> getAtendimentos() {
+		return atendimentos;
+	}
+	public void setAtendimentos(List<Atendimento> atendimentos) {
+		this.atendimentos = atendimentos;
+	}
+	
 }

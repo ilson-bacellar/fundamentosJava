@@ -9,34 +9,6 @@ import br.edu.infnet.appdent.model.auxiliar.Constante;
 @Table(name = "TCanal")
 public class Canal extends Servico {
 
-	
-//	public Integer getId() {
-//		return id;
-//	}
-//	public void setId(Integer id) {
-//		this.id = id;
-//	}
-
-	public int getNumeroSessoes() {
-		return numeroSessoes;
-	}
-	public void setNumeroSessoes(int numeroSessoes) {
-		this.numeroSessoes = numeroSessoes;
-	}
-	public String getTipoRestauracao() {
-		return tipoRestauracao;
-	}
-	public void setTipoRestauracao(String tipoRestauracao) {
-		this.tipoRestauracao = tipoRestauracao;
-	}
-	public String getTipoCoroa() {
-		return tipoCoroa;
-	}
-	public void setTipoCoroa(String tipoCoroa) {
-		this.tipoCoroa = tipoCoroa;
-	}
-
-//	private Integer id;
 	private int numeroSessoes;
 	private String tipoRestauracao;
 	private String tipoCoroa;
@@ -61,5 +33,24 @@ public class Canal extends Servico {
 		return super.toString() + " | Número de sessões: " + numeroSessoes + " | Tipo de restauração: " + tipoRestauracao + " | Tipo de coroa: " + tipoCoroa;
 	}
 	
+	
+	public int getNumeroSessoes() {
+		return numeroSessoes;
+	}
+	public void setNumeroSessoes(int numeroSessoes) {
+		this.numeroSessoes = numeroSessoes;
+	}
+	public String getTipoRestauracao() {
+		return tipoRestauracao;
+	}
+	public void setTipoRestauracao(String tipoRestauracao) {
+		this.tipoRestauracao = tipoRestauracao;
+	}
+	public String getTipoCoroa() {
+		return tipoCoroa;
+	}
+	public void setTipoCoroa(String tipoCoroa) {
+		this.tipoCoroa = tipoCoroa;
+	}
 	
 }

@@ -9,35 +9,6 @@ import br.edu.infnet.appdent.model.auxiliar.Constante;
 @Table(name = "TOrtodontia")
 public class Ortodontia extends Servico {
 
-	
-//	public Integer getId() {
-//		return id;
-//	}
-//	public void setId(Integer id) {
-//		this.id = id;
-//	}
-
-	public float getManutencao() {
-		return manutencao;
-	}
-	public void setManutencao(float manutencao) {
-		this.manutencao = manutencao;
-	}
-	public int getDuracaoEmMeses() {
-		return duracaoEmMeses;
-	}
-	public void setDuracaoEmMeses(int duracaoEmMeses) {
-		this.duracaoEmMeses = duracaoEmMeses;
-	}
-	public boolean isMicroimplante() {
-		return microimplante;
-	}
-	public void setMicroimplante(boolean microimplante) {
-		this.microimplante = microimplante;
-	}
-
-	
-//	private Integer id;
 	private float manutencao;
 	private int duracaoEmMeses;
 	private boolean microimplante;
@@ -60,6 +31,26 @@ public class Ortodontia extends Servico {
 	@Override
 	public String toString() {
 		return super.toString() + " | Manutenção: " + manutencao + " | Duração do tratamento (em meses): " + duracaoEmMeses + " | Microimplante? " + microimplante;
+	}
+	
+	
+	public float getManutencao() {
+		return manutencao;
+	}
+	public void setManutencao(float manutencao) {
+		this.manutencao = manutencao;
+	}
+	public int getDuracaoEmMeses() {
+		return duracaoEmMeses;
+	}
+	public void setDuracaoEmMeses(int duracaoEmMeses) {
+		this.duracaoEmMeses = duracaoEmMeses;
+	}
+	public boolean isMicroimplante() {
+		return microimplante;
+	}
+	public void setMicroimplante(boolean microimplante) {
+		this.microimplante = microimplante;
 	}
 	
 }
