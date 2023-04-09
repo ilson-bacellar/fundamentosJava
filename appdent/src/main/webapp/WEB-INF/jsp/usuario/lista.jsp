@@ -8,7 +8,9 @@
 	<title>Listagem de Usuários</title>
 	<style>
       body {
-      	background-image: radial-gradient(ellipse, #1397e3, #9eecf8);
+      	background-image: radial-gradient(ellipse, #1397e3, #056abd);
+      	color: white;
+       	text-shadow: 1px 1px 1px black;
       }
      </style>
 </head>
@@ -34,7 +36,7 @@
 			<h5>Quantidade de usuários cadastrados: ${usuarios.size()}!</h5>
 		</c:if>
 
-		<table class="table table-striped">
+		<table class="table">
 			<thead>
 				<tr>
 					<th>Identificador</th>
@@ -55,7 +57,7 @@
 						<td>${u.email}</td>
 						<td>${u.pacientes.size()}</td>
 						<td>${u.servicos.size()}</td>
-						<td><a href="/usuario/${u.id}/excluir">Excluir</a></td>
+						<td><a href="/usuario/${u.id}/excluir" style="color:#FFAC1C">EXCLUIR</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

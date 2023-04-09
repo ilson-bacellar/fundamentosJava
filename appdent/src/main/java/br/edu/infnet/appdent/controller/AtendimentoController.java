@@ -13,6 +13,7 @@ import br.edu.infnet.appdent.model.domain.Atendimento;
 import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.service.AtendimentoService;
 import br.edu.infnet.appdent.model.service.PacienteService;
+import br.edu.infnet.appdent.model.service.ServicoService;
 
 
 @Controller
@@ -24,12 +25,17 @@ public class AtendimentoController {
 	@Autowired
 	private PacienteService pacienteService;
 	
+	@Autowired
+	private ServicoService servicoService;
+	
 	private String msg;
 
 	@GetMapping(value = "/atendimento")
 	public String telaCadastro(Model model, @SessionAttribute("usuario") Usuario usuario) {
 
 		model.addAttribute("pacientes", pacienteService.obterLista());
+		
+		model.addAttribute("servicos", servicoService.obterLista(usuario));
 		
 		return "atendimento/cadastro";
 	}

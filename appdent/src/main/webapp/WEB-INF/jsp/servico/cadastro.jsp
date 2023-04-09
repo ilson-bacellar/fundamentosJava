@@ -2,7 +2,7 @@
 
 <div class="form-group">
 	<label>Nome:</label> 
-	<input type="text" name="nome" value="Limpeza Ortodontia ou Canal " class="form-control">
+	<input type="text" name="nome" value="Limpeza Ortodontia ou Canal" class="form-control">
 </div>
 
 <div class="form-group">

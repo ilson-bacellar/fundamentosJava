@@ -8,7 +8,9 @@
 	<title>Cadastro de Serviços de Limpeza</title>
 	<style>
       body {
-      	background-image: radial-gradient(ellipse, #1397e3, #9eecf8);
+      	background-image: radial-gradient(ellipse, #1397e3, #056abd);
+      	color: white;
+       	text-shadow: 1px 1px 1px black;
       }
      </style>
 </head>
@@ -52,7 +54,7 @@
 			    </div>
 			</div>
 						
-			<button type="submit">Cadastrar</button>
+			<button type="submit" class="btn btn-default" style="background-color:#FFAC1C; color:black; font-weight: bold; box-shadow:1px 1px 1px black">CADASTRAR</button>
 		</form>
 	</div>	
 

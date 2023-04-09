@@ -13,6 +13,8 @@
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
+       	color: white;
+       	text-shadow: 1px 1px 1px black;
       }
      </style>
 </head>
@@ -38,8 +40,10 @@
 				<label>E-mail:</label>
 				<input type="email" name="email" value="ilson@al.infnet.edu.br" class="form-control">
 			</div>
+			
+			<c:import url="/WEB-INF/jsp/endereco/cadastro.jsp"/>
 						
-			<button type="submit">Cadastrar</button>
+			<button type="submit" class="btn btn-default" style="background-color:#FFAC1C; color:black; font-weight: bold; box-shadow:1px 1px 1px black">CADASTRAR</button>
 		</form>
 	</div>
 </body>

@@ -8,7 +8,9 @@
 	<title>Listagem de Serviços</title>
 	<style>
       body {
-      	background-image: radial-gradient(ellipse, #1397e3, #9eecf8);
+      	background-image: radial-gradient(ellipse, #1397e3, #056abd);
+      	color: white;
+       	text-shadow: 1px 1px 1px black;
       }
      </style>
 </head>
@@ -34,7 +36,7 @@
 			<h5>Quantidade de serviços cadastrados: ${servicos.size()}!</h5>
 		</c:if>
 
-		<table class="table table-striped">
+		<table class="table">
 			<thead>
 				<tr>
 					<th>Identificador</th>
@@ -51,7 +53,7 @@
 						<td>${s.nome}</td>
 						<td>${s.descricao}</td>
 						<td>${s.valor}</td>
-						<td><a href="/servico/${s.id}/excluir">Excluir</a></td>
+						<td><a href="/servico/${s.id}/excluir" style="color:#FFAC1C">EXCLUIR</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

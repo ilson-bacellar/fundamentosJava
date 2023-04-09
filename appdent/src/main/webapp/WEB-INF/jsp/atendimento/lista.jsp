@@ -9,7 +9,9 @@
 	<title>Listagem de Atendimentos</title>
 	<style>
       body {
-      	background-image: radial-gradient(ellipse, #1397e3, #9eecf8);
+      	background-image: radial-gradient(ellipse, #1397e3, #056abd);
+      	color: white;
+       	text-shadow: 1px 1px 1px black;
       }
      </style>
 </head>
@@ -22,7 +24,7 @@
 		<h3>Listagem de Atendimentos</h3>
 		
 		<form action="/atendimento" method="get">
-			<button type="submit">Novo</button>
+			<button type="submit" class="btn btn-default" style="background-color:#FFAC1C; color:black; font-weight: bold; box-shadow:1px 1px 1px black">NOVO</button>
 		</form>
 
 		<c:if test="${not empty mensagem}">
@@ -39,7 +41,7 @@
 			<h5>Quantidade de atendimentos cadastrados: ${atendimentos.size()}!</h5>
 		</c:if>
 
-		<table class="table table-striped">
+		<table class="table">
 			<thead>
 				<tr>
 					<th>Identificador</th>
@@ -47,7 +49,7 @@
 					<th>Pagamento</th>
 					<th>Observações</th>
 					<th>Paciente</th>
-					<th>Servicos</th>
+					<th>Quantidade de Serviços</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -60,7 +62,7 @@
 						<td>${a.obs}</td>
 						<td>${a.paciente.nome}</td>
 						<td>${a.servicos.size()}</td>
-						<td><a href="/atendimento/${a.id}/excluir">Excluir</a></td>
+						<td><a href="/atendimento/${a.id}/excluir" style="color:#FFAC1C">EXCLUIR</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

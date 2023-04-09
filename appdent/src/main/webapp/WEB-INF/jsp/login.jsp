@@ -13,6 +13,8 @@
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
+        color: white;
+       	text-shadow: 1px 1px 1px black;
       }
     </style>
 </head>
@@ -38,8 +40,8 @@
 		    <label>Senha:</label>
 		    <input type="password" class="form-control" placeholder="Entre com a sua senha" name="senha" value="ilson@al.infnet.edu.br">
 		  </div>
-
-		  <button type="submit" class="btn btn-default">Acessar</button>
+		  
+		  <button type="submit" class="btn btn-default" style="background-color:#FFAC1C; color:black; font-weight: bold; box-shadow:1px 1px 1px black">ACESSAR</button>
 		</form>
 	</div>
 

@@ -8,7 +8,9 @@
 	<title>Cadastro de Atendimentos</title>
 	<style>
       body {
-      	background-image: radial-gradient(ellipse, #1397e3, #9eecf8);
+      	background-image: radial-gradient(ellipse, #1397e3, #056abd);
+      	color: white;
+       	text-shadow: 1px 1px 1px black;
       }
      </style>
 </head>
@@ -41,7 +43,7 @@
 			
 			<div class="form-group">
 				<label>Paciente:</label>
-				<select name="paciente.id" class="form-control">
+				<select name="paciente" class="form-control">
 				<c:forEach var="p" items="${pacientes}">
 					<option value="${p.id}">${p.nome}</option>
 				</c:forEach>
@@ -50,24 +52,16 @@
 			
 			<div class="form-group">
 				<label>Serviços:</label>
-			    <div class="form-check">
-			      <label class="form-check-label">
-			        <input type="checkbox" name="caracteristicas" value="De" class="form-check-input" > Developer
-			      </label>
-			    </div>
-			    <div class="form-check">
-			      <label class="form-check-label">
-			        <input type="checkbox" name="caracteristicas" value="An" checked class="form-check-input"> Analista
-			      </label>
-			    </div>
-			    <div class="form-check">
-			      <label class="form-check-label">
-		        		<input type="checkbox" name="caracteristicas" value="Da" class="form-check-input"> Database
-			      </label>
-			    </div>
+			    <c:forEach var="s" items="${servicos}">
+			    	<div class="form-check">
+			   		  <label class="form-check-label">
+			     	   <input type="checkbox" name="servicos" value="${s.id}" class="form-check-input" > Identificador: ${s.id} | Serviço: ${s.nome} | Descrição: ${s.descricao} 
+			     	 </label>
+			    	</div>
+				</c:forEach>
 			</div>
 						
-			<button type="submit">Cadastrar</button>
+			<button type="submit" class="btn btn-default" style="background-color:#FFAC1C; color:black; font-weight: bold; box-shadow:1px 1px 1px black">CADASTRAR</button>
 		</form>
 	</div>
 

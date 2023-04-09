@@ -9,7 +9,9 @@
 	<title>Listagem de Serviços de Canal</title>
 	<style>
       body {
-      	background-image: radial-gradient(ellipse, #1397e3, #9eecf8);
+      	background-image: radial-gradient(ellipse, #1397e3, #056abd);
+      	color: white;
+       	text-shadow: 1px 1px 1px black;
       }
      </style>
 </head>
@@ -22,7 +24,7 @@
 		<h3>Listagem de Serviços de Canal</h3>
 		
 		<form action="/canal" method="get">
-			<button type="submit">Novo</button>
+			<button type="submit" class="btn btn-default" style="background-color:#FFAC1C; color:black; font-weight: bold; box-shadow:1px 1px 1px black"">NOVO</button>
 		</form>
 
 		<c:if test="${not empty mensagem}">
@@ -39,7 +41,7 @@
 			<h5>Quantidade de serviços de canal cadastrados: ${canais.size()}!</h5>
 		</c:if>
 
-		<table class="table table-striped">
+		<table class="table">
 			<thead>
 				<tr>
 					<th>Identificador</th>
@@ -62,7 +64,7 @@
 						<td>${c.numeroSessoes}</td>
 						<td>${c.tipoRestauracao}</td>
 						<td>${c.tipoCoroa}</td>
-						<td><a href="/canal/${c.id}/excluir">Excluir</a></td>
+						<td><a href="/canal/${c.id}/excluir" style="color:#FFAC1C">EXCLUIR</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

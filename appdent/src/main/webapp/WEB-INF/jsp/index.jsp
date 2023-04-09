@@ -14,6 +14,8 @@
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
+        color: white;
+       	text-shadow: 1px 1px 1px black;
       }
     </style>
 </head>
@@ -21,7 +23,7 @@
 	
 	<c:import url="/WEB-INF/jsp/menu.jsp"/>
 	
-	<img src="/images/bruce_shark_3.png" alt="Shark">
+	<img src="/images/bruce_shark_4.png" alt="Shark">
 	
 </body>
 </html>
