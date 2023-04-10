@@ -41,7 +41,7 @@
 		    <input type="password" class="form-control" placeholder="Entre com a sua senha" name="senha" value="ilson@al.infnet.edu.br">
 		  </div>
 		  
-		  <button type="submit" class="btn btn-default" style="background-color:#FFAC1C; color:black; font-weight: bold; box-shadow:1px 1px 1px black">ACESSAR</button>
+		  <button type="submit" class="btn btn-default" style="background-color:#FFAC1C; border: none; color:black; font-weight: bold; box-shadow:1px 1px 1px black">ACESSAR</button>
 		</form>
 	</div>
 

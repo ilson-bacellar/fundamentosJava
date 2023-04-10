@@ -7,7 +7,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import br.edu.infnet.appdent.model.domain.Endereco;
 import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.service.UsuarioService;
 
@@ -19,7 +21,7 @@ public class UsuarioController {
 	private UsuarioService usuarioService;
 	
 	private String msg;
-
+	
 	@GetMapping(value = "/usuario")
 	public String telaCadastro() {
 		return "usuario/cadastro";

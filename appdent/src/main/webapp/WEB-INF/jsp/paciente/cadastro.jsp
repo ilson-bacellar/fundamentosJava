@@ -39,7 +39,7 @@
 			
 			<c:import url="/WEB-INF/jsp/endereco/cadastro.jsp"/>
 						
-			<button type="submit" class="btn btn-default" style="background-color:#FFAC1C; color:black; font-weight: bold; box-shadow:1px 1px 1px black">CADASTRAR</button>
+			<button type="submit" class="btn btn-default" style="background-color:#FFAC1C; border: none; color:black; font-weight: bold; box-shadow:1px 1px 1px black">CADASTRAR</button>
 		</form>
 	</div>
 

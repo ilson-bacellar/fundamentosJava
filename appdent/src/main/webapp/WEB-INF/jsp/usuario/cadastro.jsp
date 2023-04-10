@@ -23,6 +23,16 @@
 	<c:import url="/WEB-INF/jsp/menu.jsp"/>
 
 	<div class="container">
+	
+		<form action="/cep" class="form-inline" method="post">
+		
+			<label>Consultar CEP:</label> 	
+			<input type="text" name="cep" value="20010020" class="form-control">
+
+			<button type="submit" class="btn btn-default btn-sm" style="background-color:#FFAC1C; border: none; color:black; font-weight: bold; box-shadow:1px 1px 1px black">BUSCAR</button>
+			
+		</form>
+		
 		<form action="/usuario/incluir" method="post">
 			<h3>Cadastro de Usuários</h3>
 		
@@ -43,7 +53,7 @@
 			
 			<c:import url="/WEB-INF/jsp/endereco/cadastro.jsp"/>
 						
-			<button type="submit" class="btn btn-default" style="background-color:#FFAC1C; color:black; font-weight: bold; box-shadow:1px 1px 1px black">CADASTRAR</button>
+			<button type="submit" class="btn btn-default" style="background-color:#FFAC1C; border: none; color:black; font-weight: bold; box-shadow:1px 1px 1px black">CADASTRAR</button>
 		</form>
 	</div>
 </body>
