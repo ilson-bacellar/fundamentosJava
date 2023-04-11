@@ -3,6 +3,8 @@ package br.edu.infnet.appdent.model.service;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appdent.model.domain.Usuario;
@@ -17,7 +19,7 @@ public class UsuarioService {
 	private UsuarioRepository usuarioRepository;
 	
 	public Usuario autenticar(Usuario usuario) {
-		return usuarioRepository.autenticacao(usuario.getEmail(), usuario.getSenha());
+		return usuarioRepository.autenticacao(usuario.getEmail(), usuario.getSenha(), Sort.by(Sort.Direction.ASC, "nome"));
 	}
 	
 	public Usuario incluir(Usuario usuario) {

@@ -36,7 +36,7 @@ public class PacienteService {
 	}
 	
 	public Collection<Paciente> obterLista(Usuario usuario){
-		return (Collection<Paciente>) pacienteRepository.obterLista(usuario.getId());
+		return (Collection<Paciente>) pacienteRepository.obterLista(usuario.getId(), Sort.by(Sort.Direction.ASC, "nome"));
 	}
 
 }

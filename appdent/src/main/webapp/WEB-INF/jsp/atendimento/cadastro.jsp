@@ -16,6 +16,8 @@
 </head>
 <body>
 
+	<c:set var="botao" value=""/>
+
 	<c:import url="/WEB-INF/jsp/menu.jsp"/>
 
 	<div class="container">
@@ -40,28 +42,43 @@
 				<label>Observações:</label>
 				<input type="text" name="obs" value="" class="form-control">
 			</div>
-			
+
 			<div class="form-group">
-				<label>Paciente:</label>
-				<select name="paciente" class="form-control">
-				<c:forEach var="p" items="${pacientes}">
-					<option value="${p.id}">${p.nome}</option>
-				</c:forEach>
-				</select>
+				<c:if test="${not empty pacientes}">
+					<label>Paciente:</label>
+					<select name="paciente" class="form-control">
+						<c:forEach var="p" items="${pacientes}">
+							<option value="${p.id}">${p.nome}</option>
+						</c:forEach>
+					</select>
+				</c:if>
+				<c:if test="${empty pacientes}">
+					<c:set var="botao" value="disabled"/>
+					<label>Não existem pacientes cadstrados!</label>
+				</c:if>
 			</div>
-			
+
 			<div class="form-group">
-				<label>Serviços:</label>
-			    <c:forEach var="s" items="${servicos}">
-			    	<div class="form-check">
-			   		  <label class="form-check-label">
-			     	   <input type="checkbox" name="servicos" value="${s.id}" class="form-check-input" > Identificador: ${s.id} | Serviço: ${s.nome} | Descrição: ${s.descricao} 
-			     	 </label>
-			    	</div>
-				</c:forEach>
+				<c:if test="${not empty servicos}">
+					<label>Serviços:</label>
+					<c:forEach var="s" items="${servicos}">
+						<div class="form-check">
+							<label class="form-check-label"> 
+								<input type="checkbox"
+								name="servicos" value="${s.id}" class="form-check-input">
+								Identificador: ${s.id} | Serviço: ${s.nome} | Descrição:
+								${s.descricao}
+							</label>
+						</div>
+					</c:forEach>
+				</c:if>
+				<c:if test="${empty servicos}">
+					<c:set var="botao" value="disabled"/>
+					<label>Não existem serviços cadstrados!</label>
+				</c:if>
 			</div>
-						
-			<button type="submit" class="btn btn-default" style="background-color:#FFAC1C; border: none; color:black; font-weight: bold; box-shadow:1px 1px 1px black">CADASTRAR</button>
+
+			<button ${botao} type="submit" class="btn btn-default" style="background-color:#FFAC1C; border: none; color:black; font-weight: bold; box-shadow:1px 1px 1px black">CADASTRAR</button>
 		</form>
 	</div>
 

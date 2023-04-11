@@ -3,6 +3,8 @@ package br.edu.infnet.appdent.model.service;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appdent.model.domain.Limpeza;
@@ -32,7 +34,7 @@ public class OrtodontiaService {
 	}
 	
 	public Collection<Ortodontia> obterLista(Usuario usuario){
-		return (Collection<Ortodontia>) ortodontiaRepository.obterLista(usuario.getId());
+		return (Collection<Ortodontia>) ortodontiaRepository.obterLista(usuario.getId(), Sort.by(Sort.Direction.ASC, "nome"));
 	}	
 	
 	public Ortodontia obterPorId(Integer id) {

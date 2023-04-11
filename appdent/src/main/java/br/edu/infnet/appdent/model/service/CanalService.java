@@ -3,6 +3,8 @@ package br.edu.infnet.appdent.model.service;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appdent.model.domain.Canal;
@@ -31,7 +33,7 @@ public class CanalService {
 	}
 	
 	public Collection<Canal> obterLista(Usuario usuario){
-		return (Collection<Canal>) canalRepository.obterLista(usuario.getId());
+		return (Collection<Canal>) canalRepository.obterLista(usuario.getId(), Sort.by(Sort.Direction.ASC, "nome"));
 	}
 	
 	public Canal obterPorId(Integer id) {
