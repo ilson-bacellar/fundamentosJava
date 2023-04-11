@@ -20,7 +20,17 @@ public class Endereco {
 	private String localidade;
 	private String uf;
 	
-	
+	@Override 
+	public String toString() {
+			
+		return String.format("%s, %s, %s, %s, %s", 
+				logradouro,
+				complemento,
+				bairro,
+				localidade,
+				uf
+				);
+	}
 	
 	public Integer getId() {
 		return id;

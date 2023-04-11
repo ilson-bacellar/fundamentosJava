@@ -43,9 +43,14 @@
 					<th>Nome</th>
 					<th>Senha</th>
 					<th>E-mail</th>
+					<th>Admin</th>
+					<th>Endereço</th>
 					<th>Pacientes cadastrados</th>
 					<th>Serviços cadastrados</th>
-					<th></th>
+					<th>Atendimentos cadastrados</th>
+					<c:if test="${usuario.admin}">
+						<th></th>
+					</c:if>
 				</tr>
 			</thead>
 			<tbody>
@@ -55,9 +60,14 @@
 						<td>${u.nome}</td>
 						<td>${u.senha}</td>
 						<td>${u.email}</td>
+						<td>${u.admin}</td>
+						<td>${u.endereco}</td>
 						<td>${u.pacientes.size()}</td>
 						<td>${u.servicos.size()}</td>
-						<td><a href="/usuario/${u.id}/excluir" style="color:#FFAC1C">EXCLUIR</a></td>
+						<td>${u.atendimentos.size()}</td>
+						<c:if test="${usuario.admin}">
+							<td><a href="/usuario/${u.id}/excluir" style="color:#FFAC1C">EXCLUIR</a></td>
+						</c:if>
 					</tr>
 				</c:forEach>
 			</tbody>

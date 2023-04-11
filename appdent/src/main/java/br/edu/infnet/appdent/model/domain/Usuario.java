@@ -21,6 +21,7 @@ public class Usuario {
 	private String nome;
 	private String email;
 	private String senha;
+	private boolean admin;
 	@OneToMany
 	@JoinColumn(name = "idUsuario")
 	private List<Paciente> pacientes;
@@ -108,6 +109,12 @@ public class Usuario {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-	
+
+	public boolean isAdmin() {
+		return admin;
+	}
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
 	
 }

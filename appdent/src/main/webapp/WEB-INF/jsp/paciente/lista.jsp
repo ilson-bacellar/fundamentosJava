@@ -48,6 +48,7 @@
 					<th>Nome</th>
 					<th>Telefone</th>
 					<th>Prontuário</th>
+					<th>Endereço</th>
 					<th>Usuário</th>
 					<th></th>
 				</tr>
@@ -59,6 +60,7 @@
 						<td>${p.nome}</td>
 						<td>${p.telefone}</td>
 						<td>${p.prontuario}</td>
+						<td>${p.endereco}</td>
 						<td>${p.usuario.nome}</td>
 						<td><a href="/paciente/${p.id}/excluir" style="color:#FFAC1C">EXCLUIR</a></td>
 					</tr>

@@ -1,0 +1,3 @@
+Limpeza;Jato de bicarbonato;200
+Limpeza;Tártaro;300
+Limpeza;Completa com clareamento;500
