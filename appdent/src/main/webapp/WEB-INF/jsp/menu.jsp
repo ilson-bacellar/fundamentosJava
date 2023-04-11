@@ -9,8 +9,16 @@
 		
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="/home">Home</a></li> 
-			<c:if test="${not empty usuario}">
+			<c:if test="${(not empty usuario) and (usuario.admin)}">
 				<li><a href="/usuario/lista">Usuário</a></li>
+				<li><a href="/paciente/lista">Paciente</a></li>
+				<li><a href="/servico/lista">Serviços</a></li>
+				<li><a href="/limpeza/lista">Limpeza</a></li>
+				<li><a href="/canal/lista">Canal</a></li>
+				<li><a href="/ortodontia/lista">Ortodontia</a></li>
+				<li><a href="/atendimento/lista">Atendimento</a></li>
+			</c:if>
+			<c:if test="${(not empty usuario) and (!usuario.admin)}">
 				<li><a href="/paciente/lista">Paciente</a></li>
 				<li><a href="/servico/lista">Serviços</a></li>
 				<li><a href="/limpeza/lista">Limpeza</a></li>
