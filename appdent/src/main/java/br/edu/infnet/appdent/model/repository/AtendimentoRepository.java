@@ -15,5 +15,6 @@ public interface AtendimentoRepository extends CrudRepository<Atendimento, Integ
 
 		@Query("from Atendimento a where a.usuario.id = :userId")
 		List<Atendimento> obterLista(Integer userId, Sort sort);
-	
+		
+		
 }

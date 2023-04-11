@@ -19,7 +19,7 @@ public class UsuarioService {
 	private UsuarioRepository usuarioRepository;
 	
 	public Usuario autenticar(Usuario usuario) {
-		return usuarioRepository.autenticacao(usuario.getEmail(), usuario.getSenha(), Sort.by(Sort.Direction.ASC, "nome"));
+		return usuarioRepository.autenticacao(usuario.getEmail(), usuario.getSenha());
 	}
 	
 	public Usuario incluir(Usuario usuario) {
@@ -31,7 +31,7 @@ public class UsuarioService {
 	}
 	
 	public Collection<Usuario> obterLista(){
-		return (Collection<Usuario>) usuarioRepository.findAll();
+		return (Collection<Usuario>) usuarioRepository.obterLista(Sort.by(Sort.Direction.ASC, "nome"));
 	}
 
 }
