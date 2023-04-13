@@ -45,5 +45,9 @@ public class PacienteService {
 		return (Collection<Paciente>) pacienteRepository.findAllByOrderByNomeAsc();
 //		return (Collection<Paciente>) pacienteRepository.obterLista(usuario.getId(), Sort.by(Sort.Direction.ASC, "nome"));
 	}
+	
+	public Paciente obterPorId(Integer id) {
+		return pacienteRepository.findById(id).orElse(null);
+	}
 
 }

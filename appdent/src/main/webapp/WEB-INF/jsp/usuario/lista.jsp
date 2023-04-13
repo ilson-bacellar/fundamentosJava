@@ -66,7 +66,13 @@
 						<td>${u.servicos.size()}</td>
 						<td>${u.atendimentos.size()}</td>
 						<c:if test="${usuario.admin}">
-							<td><a href="/usuario/${u.id}/excluir" style="color:#FFAC1C">EXCLUIR</a></td>
+						<td>
+							<c:choose>
+								<c:when test = "${usuario.id != u.id}">
+									<a href="/usuario/${u.id}/excluir" style="color:#FFAC1C">EXCLUIR</a>
+								</c:when>
+							</c:choose>
+						</td>
 						</c:if>
 					</tr>
 				</c:forEach>

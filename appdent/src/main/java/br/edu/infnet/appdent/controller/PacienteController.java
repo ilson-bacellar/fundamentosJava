@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 import br.edu.infnet.appdent.exceptions.NomeIncompletoException;
 import br.edu.infnet.appdent.model.domain.Endereco;
 import br.edu.infnet.appdent.model.domain.Paciente;
+import br.edu.infnet.appdent.model.domain.Servico;
 import br.edu.infnet.appdent.model.domain.Usuario;
 import br.edu.infnet.appdent.model.service.PacienteService;
 
@@ -59,9 +60,15 @@ public class PacienteController {
 	@GetMapping(value = "/paciente/{id}/excluir")
 	public String excluir(@PathVariable Integer id) throws NomeIncompletoException {
 
-		pacienteService.excluir(id);
-		msg = "A exclusão do paciente ("+id+") foi realizada com sucesso!";
+		Paciente paciente = pacienteService.obterPorId(id);
 		
+		try {
+			pacienteService.excluir(id);
+			
+			msg = "A exclusão do paciente "+paciente.getNome()+" foi realizada com sucesso!";
+		} catch (Exception e) {
+			msg = "Impossível excluir o paciente "+paciente.getNome()+"!";
+		}
 		return "redirect:/paciente/lista";
 	}
 

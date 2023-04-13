@@ -57,8 +57,14 @@ public class LimpezaController {
 		
 		Limpeza limpeza = limpezaService.obterPorId(id);
 		
-		limpezaService.excluir(id);
-		msg = "A exclusão do serviço de limpeza "+limpeza.getNome()+" foi realizada com sucesso!";
+		
+		try {
+			limpezaService.excluir(id);
+			
+			msg = "A exclusão do serviço "+limpeza.getNome()+" foi realizada com sucesso!";
+		} catch (Exception e) {
+			msg = "Impossível excluir o serviço "+limpeza.getNome()+"!";
+		}
 		
 		return "redirect:/limpeza/lista";
 	}

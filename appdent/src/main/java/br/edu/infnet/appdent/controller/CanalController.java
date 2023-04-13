@@ -58,9 +58,13 @@ public class CanalController {
 		
 		Canal canal = canalService.obterPorId(id);
 
-		canalService.excluir(id);
-		msg = "A exclusão do serviço de canal "+canal.getNome()+" foi realizada com sucesso!";
-
+		try {
+			canalService.excluir(id);
+			
+			msg = "A exclusão do serviço "+canal.getNome()+" foi realizada com sucesso!";
+		} catch (Exception e) {
+			msg = "Impossível excluir o serviço "+canal.getNome()+"!";
+		}
 		return "redirect:/canal/lista";
 	}
 

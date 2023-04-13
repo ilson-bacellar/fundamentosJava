@@ -57,9 +57,13 @@ public class OrtodontiaController {
 
 		Ortodontia ortodontia = ortodontiaService.obterPorId(id);
 		
-		ortodontiaService.excluir(id);
-		msg = "A exclusão do serviço de ortodontia "+ortodontia.getNome()+" foi realizada com sucesso!";
-
+		try {
+			ortodontiaService.excluir(id);
+			
+			msg = "A exclusão do serviço "+ortodontia.getNome()+" foi realizada com sucesso!";
+		} catch (Exception e) {
+			msg = "Impossível excluir o serviço "+ortodontia.getNome()+"!";
+		}
 		return "redirect:/ortodontia/lista";
 	}
 
